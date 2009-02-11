@@ -1,0 +1,15 @@
+#!/bin/sh
+
+################################################################################
+#                                                                              #
+# A system-wide starup script for the inspecting tool. This typically goes     #
+# into /usr/bin/diva . This script it being filled-in by the SCons build       #
+# script.                                                                      #
+#                                                                              #
+################################################################################
+
+export DIVA_LOCALE="%LOCALEDIR%"
+export MONO_PATH="$MONO_PATH:%LIBDIR%/diva"
+export LD_LIBRARY_PATH="$LD_LIBRARY_PATH:%LIBDIR%/diva:"
+
+exec mono "%LIBDIR%/diva/inspector.exe" "$@"

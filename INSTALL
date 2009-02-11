@@ -1,0 +1,25 @@
+= Installation =
+
+Please check the RELEASE notes and our website for complete build
+instructions and documentation:
+
+http://www.diva-project.org/wiki/Installation
+
+Diva is using SCons as the build system. You need to have it installed
+to build this software. For those who would like to start quick &
+dirty, type:
+
+  `scons`
+
+to build diva. You can now run it using the `bin/diva-uninstalled.sh`
+script. If you'd like to install it system-wide type:
+  
+  `scons install PREFIX=/usr`
+
+Please refer to the wiki docs if in trouble.
+
+= Packaging =
+
+If you're a package maintainer (or you're building a package for Diva)
+please take a look at the SConstruct file and the notes in the header 
+(path) section of it. Try to use the latest SCons version possible.

@@ -1,0 +1,30 @@
+TRUNK 
+ * Fixed menu components breakage when using bigger fonts
+ * Undo/redo history can be wiped/cleared by the user
+ * Main window geometry stored/remembered across sessions
+ * A master playback audio volume control
+
+ * New translation: French (Alexis Deruelle)
+
+Diva 0.0.2 (Tue May 09 2006)
+ * Configurable (resolution, audio format) Theora exporter
+ * Main menu cosmetic changes
+ * A new plugin to export sound as uncompressed wave file
+ * Adding a save nag when user tries to quit without saving
+ * Be nice about pipeline errors (ie. other app using the device)
+ * Forbiding to load a file in a different fps (than the project)
+ * Unified compsinks and fixed freeze/hang bug
+ * i18n translation infrastructure (translators are welcome)
+ * Fixing the Gnome 2.14 window anomalies
+ * Bringing back diva-inspector command-line utility to inspect media files
+ * Adding an option to open an arbitrary project from filesystem
+ * Extra performance optimization when playing silence
+ * The audio renderer can now support any format (16/8 stereo/mono)
+ * Use Gst native elements for resampling/reconverting audio
+ * Separated audio rendering code with some performance optimizations
+ * An option to save the screenshot (video frame) to a PNG file
+ * Separated video rendering code with some performance optimizations
+ * NUnit tests for gdv
+
+Diva 0.0.1 (Tue Mar 28 2006)
+ * Initial release

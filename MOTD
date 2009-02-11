@@ -1,0 +1,12 @@
+/-MESSAGE OF THE DAY: 06-13-2006--------------------------------------------\
+|                                                                           |
+| The brand new & cool PlastikExperimental engine code has been just merged |
+| in! Things are still pretty shaky and there might be some new bugs.       |
+|                                                                           |
+| Diva doesn't require GStreamer patching any longer, but you really need   |
+| the latest & greatest versions of gst-everything. In particular, YOU NEED |
+| ALL THE LATEST PLUGIN VERSIONS!                                           |
+|                                                                           |
+| Most of the present bugs seem to be related to broken/old plugins.        |
+|                                                                           |
+\---------------------------------------------------------------------------/

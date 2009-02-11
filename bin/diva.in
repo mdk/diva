@@ -1,0 +1,17 @@
+#!/bin/sh
+
+################################################################################
+#                                                                              #
+# A system-wide starup script. This typically goes into /usr/bin/diva . We set #
+# some paths here and we launch the main application. This script it being     #
+# filled-in by the SCons build script. DIVA_PLUGINS and DIVA_LOCALE env vars   #
+# are actually used by the program to locate stuff.                            #
+#                                                                              #
+################################################################################
+
+export DIVA_PLUGINS="%LIBDIR%/diva/plugins/"
+export DIVA_LOCALE="%LOCALEDIR%"
+export MONO_PATH="$MONO_PATH:%LIBDIR%/diva"
+export LD_LIBRARY_PATH="$LD_LIBRARY_PATH:%LIBDIR%/diva:$DIVA_PLUGINS:"
+
+exec mono "%LIBDIR%/diva/diva.exe" "$@"

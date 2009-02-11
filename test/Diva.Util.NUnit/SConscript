@@ -1,0 +1,12 @@
+Import                          ('monoEnv');
+
+sources = Split                 ('Diva.Util.NUnit.FromSMPTETest.cs \
+                                  Diva.Util.NUnit.StringingTest.cs \
+                                  Diva.Util.NUnit.DirTest.cs \
+                                  Diva.Util.NUnit.ToSMPTETest.cs');
+
+env = monoEnv.Copy              (REF = Split ('#src/Gdv/gdv.dll #src/Diva.Util/util.dll'),
+                                 PKG = Split ('mono-nunit \
+                                               gtk-sharp-2.0'));		
+
+env.Dll                         ('divautilnunit.dll', sources);

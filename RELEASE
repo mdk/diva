@@ -1,0 +1,46 @@
+= Diva 0.0.2 (http://www.diva-project.org) =
+
+This our second ALPHA release. Please do bear in mind it contains bugs
+and is not meant for general usage (yet). A lot of nasty issues from
+0.0.1 were fixed, but theare are still some rough edges. In
+particular, we still require patching of gst-plugins-good (dv
+decoder). We understand this is a nasty solution. This situation will
+be fixed in next release, where we'll be (hopefully) supporting many
+more formats out-of-the box.  
+
+This release is very much an "internal" release to catch some breath
+before the major changes that will make 0.0.3 a milestone. 
+
+Starting from this version we've got a i18n translation
+infrastructure. We welcome all translators to start porting diva to
+your native languages. Check the po/README for instructions/guide. 
+
+
+== Dependencies ==
+
+ * mono >= 1.1.0
+ * gtk+-2.0 >= 2.8.0
+ * cairo >= 1.0.0
+ * gtk-sharp-2.0 >= 2.8.0
+ * scons >= 0.95
+ * gstreamer >= 0.10.4
+ * gst-plugins-base >= 0.10.4
+ * gst-plugins-good >= 0.10.2
+ * gst-ffmpeg >= 0.10
+
+ 
+== Caveats ==
+
+ * You need to patch gst-plugins-good with the patch located in patches/ .
+   Check our website for instructions.
+ * You can import only DV, WAV and JPEG/PNG files.
+ * Only .dv RAW files will work (DV packed in AVI will not work)
+ * Depending on your setup it might not work well with Xgl OR you might
+   experience ''severly'' reduced performance when using Xgl
+ * We don't guarantee that projects edited/saved with this version will be
+   readable with future versions
+ * There are still some nasty "freeze" bugs left here and there. We're
+   fixing that. 
+
+
+This software is still under heavy development. Please help us make it better!

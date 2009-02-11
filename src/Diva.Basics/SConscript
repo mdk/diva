@@ -1,0 +1,42 @@
+import                          os;
+Import                          ('divaEnv');
+Import                          ('shellEnv');
+
+env = divaEnv.Copy              ();
+
+sources = Split                 ('AssemblyInfo.cs \
+                                  Diva.Basics.DataElement.cs \
+                                  Diva.Basics.DataContainer.cs \
+                                  Diva.Basics.DataParameter.cs \
+                                  Diva.Basics.StringParameter.cs \
+                                  Diva.Basics.BoolParameter.cs \
+                                  Diva.Basics.TimeParameter.cs \
+                                  Diva.Basics.TimeSpanParameter.cs \
+                                  Diva.Basics.RefParameter.cs \
+                                  Diva.Basics.IntParameter.cs \
+                                  Diva.Basics.DoubleParameter.cs \
+                                  Diva.Basics.ParamedContainer.cs \
+                                  Diva.Basics.ObjectContainer.cs \
+                                  Diva.Basics.ObjectListContainer.cs \
+                                  Diva.Basics.Exceptions.cs \
+                                  Diva.Basics.IBoilProvider.cs \
+                                  Diva.Basics.DataFactory.cs \
+                                  Diva.Basics.BoilFactory.cs \
+                                  Diva.Basics.IBoilable.cs \
+                                  Diva.Basics.TypeAttribute.cs \
+                                  Diva.Basics.BoilersAttribute.cs \
+                                  Diva.Basics.UnBoilFuncAttribute.cs \
+                                  Diva.Basics.GetDepObjectsFuncAttribute.cs \
+                                  Diva.Basics.BoilFuncAttribute.cs');
+
+assemblyInfo = shellEnv.Subst   ('AssemblyInfo.cs', '#common/AssemblyInfo.cs.in');
+
+basics = env.Dll                ('basics.dll', sources);
+
+env.Depends                     (basics, assemblyInfo);
+
+# INSTALL ######################################################################
+
+Alias                           ("install", env.Install (os.path.join (env ['DESTDIR'], 
+                                                                       env ['LIBDIR'],
+                                                                       'diva'), basics));

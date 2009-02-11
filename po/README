@@ -1,0 +1,75 @@
+= Notes on creating a localization (l10n) for diva =
+
+Diva uses the standard gettext for localization. The process is very much
+straight-forward and similiar to other gettext/autotools bundles. 
+
+
+== Update the pot file ==
+
+Please enter the po/ directory and run the genmessages.sh script to create an
+up-to-date diva.pot file:
+
+  `$ ./genmessages.sh`
+
+This file is a template for your translation.
+
+
+== Create a po file for your locale ==
+
+In the po/ directory (containing the diva.pot) run msginit:
+
+  `$ msginit`
+
+This should create a .po file based on your `LC_ALL` environment variable.
+After the .po file has been created start the translation by opening it with
+your favorite editor. For example:
+
+  `$ vi pt_BR.po`
+
+In most cases you will want to use an editor that supports the UTF-8 character
+encoding (most po files use this encoding). GEdit (the gnome default editor)
+is a good choice and it provides some extra syntax highlighting for the .po
+files.   
+
+
+== Testing the translation ==
+
+Before you test your translation with Diva, it is encouraged that you check the
+syntax of your .po file and fix all the errors.
+
+  `$ msgfmt --statistics <po file>`
+
+After the syntax check you might want to test it in Diva. Start by
+adding your .po file to the `SConscript` in the po/ directory. Follow the
+example of other translations being already there (obviously changing the
+filename).   
+
+Recompile and run uninstalled version of diva. 
+
+  `$ bin/diva-uninstalled.sh`
+
+If your system locale matches the locale you're working on, you should see
+the translation being used.
+
+
+== Updating ==
+
+In the future new translations will need to be added as the project grows.To
+update existing translations read the instrutions above about generating the
+pot file and then update the po file:
+
+  `$ msgmerge -U <po file> diva.pot`
+
+After running the command the new untranslated strings will be merged to the
+po file.  Just edit the po file to add new translations.
+
+This method can be automized when you append this line in the ./genmessages.sh
+for your language. More instructions are given in the scriptfile.
+
+
+== Finalizing ==
+
+After you're done with the translating save the file and submit it to the
+maintainers to be included in the upstream repository. Feel free to ask for an
+SVN account (if you don't have one yet) so that you can easily maintain the
+translation in future.

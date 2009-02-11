@@ -1,0 +1,73 @@
+import                          os;
+Import                          ('CEnv');
+Import                          ('divaEnv');
+Import                          ('shellEnv');
+
+# C ############################################################################
+
+localEnvC = CEnv.Copy           ();
+            
+sourcesC = Split                ('DivaWidgetsAspectFrame.c \
+                                  DivaWidgetsThmbRenderer.c \
+                                  DivaWidgetsPaintRenderer.c \
+                                  DivaWidgetsTaggyRenderer.c \
+                                  DivaWidgetsStub.c');
+
+localEnvC.Append                (CPPPATH = Split ('#src/Gdv/ #src/Diva.Cairo/'),
+                                 LIBS= Split ('gdv divacairo'));
+
+widgets = localEnvC.SharedLibrary('libdivawidgets', sourcesC);
+
+# Mono #########################################################################
+
+localEnvMono = divaEnv.Copy     ();
+
+localEnvMono.Append             (REF = Split ('#src/Diva.Util/util.dll \
+                                               #src/Diva.Cairo/cairo.dll'));
+
+sourcesMono = Split             ('AssemblyInfo.cs \
+                                  Diva.Widgets.OffsettedButton.cs \
+                                  Diva.Widgets.AspectFrame.cs \
+                                  Diva.Widgets.FormatsComboBox.cs \
+                                  Diva.Widgets.IntyComboBox.cs \
+                                  Diva.Widgets.AudioFormatsComboBox.cs \
+                                  Diva.Widgets.VideoFormatsComboBox.cs \
+                                  Diva.Widgets.AudioFormatDialog.cs \
+                                  Diva.Widgets.VideoFormatDialog.cs \
+                                  Diva.Widgets.SampleRateComboBox.cs \
+                                  Diva.Widgets.DepthComboBox.cs \
+                                  Diva.Widgets.ChannelsComboBox.cs \
+                                  Diva.Widgets.ThmbRenderer.cs \
+                                  Diva.Widgets.MediaButton.cs \
+                                  Diva.Widgets.IconicMenuItem.cs \
+                                  Diva.Widgets.OpenMediaDialog.cs \
+                                  Diva.Widgets.PaintRenderer.cs \
+                                  Diva.Widgets.TangoColorCombo.cs \
+                                  Diva.Widgets.ISwitchableProgress.cs \
+                                  Diva.Widgets.FastDialog.cs \
+                                  Diva.Widgets.Stub.cs \
+                                  Diva.Widgets.Task.cs \
+                                  Diva.Widgets.Enums.cs \
+                                  Diva.Widgets.TaggyRenderer.cs \
+                                  Diva.Widgets.MesurableTask.cs \
+                                  Diva.Widgets.IUnbindable.cs \
+                                  Diva.Widgets.Args.cs \
+                                  Diva.Widgets.Handlers.cs \
+                                  Diva.Widgets.EmptyModelController.cs');
+
+assemblyInfo = shellEnv.Subst   ('AssemblyInfo.cs', '#common/AssemblyInfo.cs.in')
+
+widgetsdll = localEnvMono.Dll   ('widgets.dll', sourcesMono);
+
+localEnvMono.Depends            (widgetsdll, '#src/Diva.Widgets/libdivawidgets.so');
+localEnvMono.Depends            (widgetsdll, assemblyInfo);
+
+# INSTALL ######################################################################
+
+Alias                           ("install", localEnvC.Install (os.path.join (localEnvC ['DESTDIR'], 
+                                                                             localEnvC ['LIBDIR'],
+                                                                             'diva'), widgets));
+
+Alias                           ("install", localEnvMono.Install (os.path.join (localEnvMono ['DESTDIR'], 
+                                                                                localEnvMono ['LIBDIR'],
+                                                                                'diva'), widgetsdll));

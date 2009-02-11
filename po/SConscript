@@ -1,0 +1,32 @@
+import                          os;
+Import                          ('localeEnv');
+
+# ENV ######################################################################
+
+# FIXME: This is a dirty solution. Should be fixed in the builder.
+if GetOption ('clean'):
+        Execute (Delete ('fr'));
+        Execute (Delete ('nl'));
+
+# BUILD ####################################################################
+# Translators - insert your stuff here using the provided scheme
+# The dir should be: $lang_code$/LC_MESSAGES/diva.mo
+
+# French
+fr = localeEnv.Locale           ('fr/LC_MESSAGES/diva.mo', 'fr.po');
+nl = localeEnv.Locale		('nl/LC_MESSAGES/diva.mo', 'nl.po');
+
+# INSTALL ##################################################################
+# Translators - insert your stuff here using the provided scheme
+
+Alias                           ("install", localeEnv.Install (os.path.join (localeEnv ['DESTDIR'], 
+                                                                             localeEnv ['LOCALEDIR'], 
+                                                                             'fr', 'LC_MESSAGES'),
+                                                                             fr));
+
+Alias                           ("install", localeEnv.Install (os.path.join (localeEnv ['DESTDIR'], 
+                                                                             localeEnv ['LOCALEDIR'], 
+                                                                             'nl', 'LC_MESSAGES'),
+                                                                             nl));
+
+

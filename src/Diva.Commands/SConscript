@@ -1,0 +1,48 @@
+import                          os;
+Import                          ('divaEnv');
+Import                          ('shellEnv');
+
+env = divaEnv.Copy              ();
+
+env.Append                      (REF = Split ('#src/Diva.Core/core.dll \
+                                               #src/Diva.Util/util.dll \
+                                               #src/Diva.Basics/basics.dll \
+                                               #src/Diva.Widgets/widgets.dll'));
+
+sources = Split                 ('AssemblyInfo.cs \
+                                  Diva.Commands.AddFileToProject.cs \
+                                  Diva.Commands.AddManyFilesToProject.cs \
+                                  Diva.Commands.LoaderTask.cs \
+                                  Diva.Commands.ChangeOpacity.cs \
+                                  Diva.Commands.CreateNewTag.cs \
+                                  Diva.Commands.ApplyTag.cs \
+                                  Diva.Commands.RemoveTag.cs \
+                                  Diva.Commands.MultiCommand.cs \
+                                  Diva.Commands.LoadFailureDialog.cs \
+                                  Diva.Commands.WrongFpsDialog.cs \
+                                  Diva.Commands.LoaderHelper.cs \
+                                  Diva.Commands.Stub.cs \
+                                  Diva.Commands.Enums.cs \
+                                  Diva.Commands.Handlers.cs \
+                                  Diva.Commands.Args.cs \
+                                  Diva.Commands.EditTagName.cs \
+                                  Diva.Commands.DeleteTag.cs \
+                                  Diva.Commands.AddClip.cs \
+                                  Diva.Commands.CutClip.cs \
+                                  Diva.Commands.RemoveClip.cs \
+                                  Diva.Commands.LeftAdjustClip.cs \
+                                  Diva.Commands.RightAdjustClip.cs \
+                                  Diva.Commands.MoveClip.cs \
+                                  Diva.Commands.TrackClip.cs');
+
+assemblyInfo = shellEnv.Subst   ('AssemblyInfo.cs', '#common/AssemblyInfo.cs.in');
+
+commands = env.Dll              ('commands.dll', sources);
+
+env.Depends                     (commands, assemblyInfo);
+
+# INSTALL ######################################################################
+
+Alias                           ("install", env.Install (os.path.join (env ['DESTDIR'], 
+                                                                       env ['LIBDIR'],
+                                                                       'diva'), commands));

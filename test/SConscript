@@ -1,0 +1,28 @@
+Import                  ('monoEnv');
+Import                  ('CheckPkg');
+
+testEnv = monoEnv.Copy  (PKG = Split ('gtk-sharp-2.0 gnome-sharp-2.0'), 
+                         REF = Split ('#src/Gdv/gdv.dll'),
+                         GREF = Split ('Mono.Posix.dll'));
+
+Export                  ('testEnv');
+
+if not monoEnv.GetOption ('clean') and 'test' in COMMAND_LINE_TARGETS:
+    print "Optional deps:"
+    print
+    monoConf = Configure (monoEnv, custom_tests = {'CheckPkg' : CheckPkg })
+    if not monoConf.CheckPkg('mono-nunit', '1.1'): Exit (1);
+    print
+    monoConf.Finish         ();
+
+# TESTS #######################################################################
+
+SConscript              ('Diva.Cairo.Test/SConscript');
+SConscript              ('Diva.Basics.Test/SConscript');
+SConscript              ('Diva.Widgets.Test/SConscript');
+SConscript              ('Gdv.NUnit/SConscript');
+SConscript              ('Diva.Util.NUnit/SConscript');
+SConscript              ('SeekPlayer/SConscript');
+SConscript              ('ClipPlayer/SConscript');
+SConscript              ('SourcePlayer/SConscript');
+SConscript              ('TrackPlayer/SConscript');

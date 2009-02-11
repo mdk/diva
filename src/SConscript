@@ -1,0 +1,30 @@
+Import                  ('monoEnv');
+
+divaEnv = monoEnv.Copy  (PKG = Split ('gtk-sharp-2.0 gnome-sharp-2.0'), 
+                         REF = Split ('#src/Gdv/gdv.dll'),
+                         GREF = Split ('Mono.Posix.dll'));
+
+Export                  ('divaEnv');
+
+# Gdv components ###############################################################
+
+SConscript              ('Gdv/SConscript');
+SConscript              ('Gdv.Boilers/SConscript');
+
+# Diva components ##############################################################
+
+SConscript              ('Diva.Exe/SConscript');
+SConscript              ('Diva.Util/SConscript');
+SConscript              ('Diva.MainMenu/SConscript')
+SConscript              ('Diva.Editor.Model/SConscript')
+SConscript              ('Diva.Editor.Gui/SConscript')
+SConscript              ('Diva.Editor.Timeline/SConscript')
+SConscript              ('Diva.Widgets/SConscript');
+SConscript              ('Diva.Cairo/SConscript');
+SConscript              ('Diva.Core/SConscript');
+SConscript              ('Diva.Commands/SConscript');
+SConscript              ('Diva.PluginLib/SConscript');
+SConscript              ('Diva.Config/SConscript');
+SConscript              ('Diva.Basics/SConscript');
+SConscript              ('Diva.Plugins/SConscript');
+SConscript              ('Diva.Inspector/SConscript');

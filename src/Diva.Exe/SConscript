@@ -1,0 +1,28 @@
+import                          os;
+Import                          ('divaEnv');
+Import                          ('shellEnv');
+
+env = divaEnv.Copy              ();
+
+env.Append                      (REF = Split ('#src/Diva.Util/util.dll \
+                                               #src/Diva.MainMenu/mainmenu.dll \
+                                               #src/Diva.Widgets/widgets.dll \
+                                               #src/Diva.Editor.Model/editormodel.dll \
+                                               #src/Diva.Editor.Gui/editorgui.dll \
+                                               #src/Diva.Editor.Timeline/editortimeline.dll \
+                                               #src/Diva.Core/core.dll'));
+
+sources = Split                 ('AssemblyInfo.cs \
+                                  Diva.Exe.cs');
+
+assemblyInfo = shellEnv.Subst   ('AssemblyInfo.cs', '#common/AssemblyInfo.cs.in')
+
+exe = env.Exe                   ('diva.exe', sources);
+
+env.Depends                     (exe, assemblyInfo);
+
+# INSTALL ######################################################################
+
+Alias                           ("install", env.Install (os.path.join (env ['DESTDIR'], 
+                                                                       env ['LIBDIR'],
+                                                                       'diva'), exe));

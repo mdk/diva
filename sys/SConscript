@@ -1,0 +1,15 @@
+import                  os;
+Import                  ('shellEnv');
+
+divaDesktop = shellEnv.Subst ('diva.desktop', 'diva.desktop.in')
+
+# INSTALL ######################################################################
+
+Alias                   ("install", shellEnv.Install (os.path.join (shellEnv ['DESTDIR'], 
+                                                                    shellEnv ['SHAREDIR'],
+                                                                    'applications'), divaDesktop))
+
+Alias                   ("install", shellEnv.Install (os.path.join (shellEnv ['DESTDIR'], 
+                                                                    shellEnv ['SHAREDIR'],
+                                                                    'pixmaps'), 'diva.png'))
+

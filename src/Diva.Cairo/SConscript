@@ -1,0 +1,46 @@
+import                          os;
+Import                          ('CEnv');
+Import                          ('divaEnv');
+Import                          ('shellEnv');
+
+# C ############################################################################
+
+localEnvC = CEnv.Copy           ();
+            
+sourcesC = Split                ('DivaCairoGraphics.c \
+                                  DivaCairoSketch.c \
+                                  DivaCairoDraw.c \
+                                  DivaCairoReadyMade.c \
+                                  DivaCairoUtil.c');
+
+localEnvC.Append                (CPPPATH='#src/Gdv/',
+                                 LIBS= Split ('gdv'));
+
+cairo = localEnvC.SharedLibrary('libdivacairo', sourcesC);
+
+# MONO #########################################################################
+
+localEnvMono = divaEnv.Copy     ();
+
+sourcesMono = Split             ('AssemblyInfo.cs \
+                                  Diva.Cairo.Graphics.cs \
+                                  Diva.Cairo.Draw.cs \
+                                  Diva.Cairo.Enums.cs \
+                                  Diva.Cairo.ReadyMade.cs');
+
+assemblyInfo = shellEnv.Subst   ('AssemblyInfo.cs', '#common/AssemblyInfo.cs.in');
+
+cairodll = localEnvMono.Dll     ('cairo.dll', sourcesMono);
+
+localEnvMono.Depends            (cairodll, cairo);
+localEnvMono.Depends            (cairodll, assemblyInfo);
+
+# INSTALL ######################################################################
+
+Alias                           ("install", localEnvC.Install (os.path.join (localEnvC ['DESTDIR'], 
+                                                                             localEnvC ['LIBDIR'],
+                                                                             'diva'), cairo));
+
+Alias                           ("install", localEnvMono.Install (os.path.join (localEnvMono ['DESTDIR'], 
+                                                                                localEnvMono ['LIBDIR'],
+                                                                                'diva'), cairodll));

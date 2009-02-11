@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Encoding=UTF-8
+Name=Diva Video Editor
+GenericName=Video editor
+Comment=Edit and play your digital videos
+Icon=diva.png
+Exec=%BINDIR%/diva
+Terminal=false
+Categories=GNOME;KDE;GTK;Application;Multimedia;AudioVideo;Video;

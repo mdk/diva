@@ -1,0 +1,46 @@
+import                          os;
+Import                          ('divaEnv');
+Import                          ('shellEnv');
+
+env = divaEnv.Copy              ();
+
+env.Append                      (REF = Split ('#src/Diva.Util/util.dll \
+                                               #src/Diva.Widgets/widgets.dll \
+                                               #src/Diva.Basics/basics.dll \
+                                               #src/Diva.Editor.Model/editormodel.dll \
+                                               #src/Diva.Editor.Gui/editorgui.dll \
+                                               #src/Diva.Editor.Timeline/editortimeline.dll \
+                                               #src/Diva.PluginLib/pluginlib.dll \
+                                               #src/Diva.Config/config.dll \
+                                               #src/Diva.Core/core.dll \
+                                               #src/Gdv.Boilers/gdvboilers.dll \
+                                               #src/Diva.Commands/commands.dll'),
+                                 RESOURCE = Split ('Resources/Splash.png'));
+
+sources = Split                 ('AssemblyInfo.cs \
+                                  Diva.MainMenu.Window.cs \
+                                  Diva.MainMenu.SplashDrawingArea.cs \
+                                  Diva.MainMenu.SplashVBox.cs \
+                                  Diva.MainMenu.WelcomeVBox.cs \
+                                  Diva.MainMenu.NewProjectVBox.cs \
+                                  Diva.MainMenu.InitializerTask.cs \
+                                  Diva.MainMenu.RecentProjectsTreeView.cs \
+                                  Diva.MainMenu.OpenProjectVBox.cs \
+                                  Diva.MainMenu.ProjectsSpooferTask.cs \
+                                  Diva.MainMenu.SwitchableContainer.cs \
+                                  Diva.MainMenu.Model.cs \
+                                  Diva.MainMenu.Args.cs \
+                                  Diva.MainMenu.Enums.cs \
+                                  Diva.MainMenu.Handlers.cs');
+
+assemblyInfo = shellEnv.Subst   ('AssemblyInfo.cs', '#common/AssemblyInfo.cs.in')
+
+mainmenu = env.Dll              ('mainmenu.dll', sources);
+
+env.Depends                     (mainmenu, assemblyInfo);
+
+# INSTALL ######################################################################
+
+Alias                           ("install", env.Install (os.path.join (env ['DESTDIR'], 
+                                                                       env ['LIBDIR'],
+                                                                       'diva'), mainmenu));

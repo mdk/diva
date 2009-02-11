@@ -1,0 +1,8 @@
+using System.Reflection;
+using System.Runtime.CompilerServices;
+
+[assembly: AssemblyVersion("%VERSION%.*")]
+[assembly: AssemblyDescription("%VERSIONSLUG%")]
+[assembly: AssemblyCopyright("2005 Michael Dominic K. and others")]
+[assembly: AssemblyTrademark("MIT X11 License")]
+[assembly: AssemblyProduct("Diva")]

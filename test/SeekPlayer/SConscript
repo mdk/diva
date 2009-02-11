@@ -1,0 +1,13 @@
+import                          os;
+Import                          ('CEnv');
+
+# C ############################################################################
+
+localEnvC = CEnv.Copy           ();
+localEnvC.Append                (CPPPATH = Split ('.'),
+				 CPPFLAGS = Split ('-g'));
+            
+sourcesC = Split                ('SeekPlayer.c');
+
+seekplayer = localEnvC.Program  ('seekplayer', sourcesC);
+

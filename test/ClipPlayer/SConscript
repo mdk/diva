@@ -1,0 +1,14 @@
+import                          os;
+Import                          ('CEnv');
+
+# C ############################################################################
+
+localEnvC = CEnv.Copy           ();
+localEnvC.Append                (CPPPATH = Split ('. #src/Gdv/'),
+				 CPPFLAGS = Split ('-g'),
+                                 LIBS = Split ('gdv'));
+            
+sourcesC = Split                ('ClipPlayer.c');
+
+seekplayer = localEnvC.Program  ('clipplayer', sourcesC);
+

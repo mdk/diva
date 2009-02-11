@@ -1,0 +1,17 @@
+Import                          ('testEnv');
+
+sources = Split                 ('Diva.Basics.Test.Parameters.cs \
+                                  Diva.Basics.Test.Exe.cs \
+                                  Diva.Basics.Test.Write.cs \
+                                  Diva.Basics.Test.Plane.cs \
+                                  Diva.Basics.Test.Boiling.cs \
+                                  Diva.Basics.Test.Ship.cs \
+                                  Diva.Basics.Test.ShipBoiler.cs \
+                                  Diva.Basics.Test.UnBoiling.cs \
+                                  Diva.Basics.Test.Read.cs');
+
+env = testEnv.Copy              ();
+
+env.Append                      (REF = Split ('#src/Diva.Basics/basics.dll'));
+
+env.Exe                         ('basicstest.exe', sources);

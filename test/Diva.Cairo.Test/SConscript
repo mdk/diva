@@ -1,0 +1,20 @@
+Import                          ('testEnv');
+
+env = testEnv.Copy              ();
+
+env.Append                      (REF = Split ('#src/Diva.Cairo/cairo.dll'), 
+                                 RESOURCE = Split ('Resources/thmb1.png \
+                                                    Resources/thmb2.png'));
+
+sources = Split                 ('Diva.Cairo.Test.Exe.cs \
+                                  Diva.Cairo.Test.Window.cs \
+                                  Diva.Cairo.Test.DrawingArea.cs \
+                                  Diva.Cairo.Test.GradientsArea.cs \
+                                  Diva.Cairo.Test.OutlinedSolidsArea.cs \
+                                  Diva.Cairo.Test.SolidsArea.cs \
+                                  Diva.Cairo.Test.Blocks.cs \
+                                  Diva.Cairo.Test.Clips.cs \
+                                  Diva.Cairo.Test.ClipsSimpleArea.cs \
+                                  Diva.Cairo.Test.GimmicsArea.cs');
+
+env.Exe                         ('cairotest.exe', sources);

@@ -1,0 +1,1006 @@
+2006-06-26  Michael Dominic K.  <michaldominik@gmail.com> 
+
+	* src/Gdv/GdvPipeline.c:
+	* src/Gdv/GdvTrack.c:
+	Fixing a bug with double reseek-needed signals being emmited.
+
+	g
+
+2006-06-26  Michael Dominic K.  <michaldominik@gmail.com> 
+
+	* src/Diva.Commands/Diva.Commands.CutClip.cs:
+	Fixing the saving when the cut operation was used.
+
+2006-06-26  Michael Dominic K.  <michaldominik@gmail.com> 
+
+	* src/Gdv/GdvCompSink.c:
+	* src/Gdv/GdvCompSink.h:
+	Fixing an issue with null-caps buffers being sent.
+
+2006-06-15  Michael Dominic K.  <michaldominik@gmail.com> 
+
+	* common/svn2changelog.rb:
+	Adding a simple script to generate ChangeLog entries from svn status
+	command. Use ":r! common/svn2changelog.rb" from vim. 
+
+	* src/Gdv/GdvCompSink.c:
+	* src/Gdv/GdvCompSinkPrivate.h:
+	Actually honor the name of the requested pads (instead of using the
+	template basename).
+
+	* src/Gdv/GdvTwinCompSink.c:
+	* src/Gdv/GdvTwinCompSink.h:
+	* src/Gdv/GdvTwinCompSinkPrivate.h:
+	Refactoring to be based on GdvCompSink. 
+	For now it overlays the buffers, instead of rendering them one next to
+	each other.
+
+	* src/Gdv/GdvTwinViewBin.c:
+	Making the seeking more sane.
+
+2006-06-13  Michael Dominic K.  <michaldominik@gmail.com>
+
+	* README:
+	* SConstruct:
+	Adding a note about the commented-out path options and some hints for
+	package maintainers.
+
+	* src/Gdv/GdvClip.c:
+	* src/Gdv/GdvClip.h:
+	Removing some dead code.
+
+	* src/Gdv/GdvBlackSheep.c:
+	Fixing a compile warning.
+
+2006-06-13  Michael Dominic K.  <michaldominik@gmail.com>
+
+	* src/Gdv/GdvBlackSheep.c:
+	* src/Gdv/GdvBlackSheepPrivate.h:
+	Making the null-buffer smaller (16x16, perf).
+	Do not fill with green (perf). 
+
+	* src/Gdv/GdvSilentSheep.c:
+	* src/Gdv/GdvSilentSheep.h:
+	Do not fill with noise (perf).
+
+2006-06-13  Michael Dominic K.  <michaldominik@gmail.com>
+
+	* src/Gdv/GdvFrameableInterfacePrivate.h:
+	* src/Gdv/GdvFileBasedInterfacePrivate.h:
+	* src/Gdv/GdvTimeableInterfacePrivate.h:
+	* src/Gdv/GdvThumbnailableInterfacePrivate.h:
+	* src/Gdv/GdvFileBasedInterface.c:
+	* src/Gdv/GdvFileBasedInterface.h:
+	* src/Gdv/GdvTimeableInterface.c:
+	* src/Gdv/GdvTimeableInterface.h:
+	* src/Gdv/GdvThumbnailableInterface.c:
+	* src/Gdv/GdvThumbnailableInterface.h:
+	* src/Gdv/GdvFrameableInterface.c:
+	* src/Gdv/GdvFrameableInterface.h:
+	Hiding the private bits (static) of all the C-based interfaces.
+
+2006-06-13  Michael Dominic K.  <michaldominik@gmail.com>
+
+	* po/diva.pot:
+	* po/POTFILES.in:
+	Removing. We want translators to generate it themselves, as discussed
+	on the mailing list (2006-05-10).
+
+	* po/README:
+	Documentation update regarding regeneration.
+
+	* po/genmessages.sh:
+	Adding an extra sed command to remove all Diva.Config references from
+	the generated POTFILES.in. The tool is dumb and picks up gconf-paths
+	as translatable strings.
+
+	* po/SConscript:
+	Adding a 'clean' routine for the nl translation.
+
+2006-06-13  Michael Dominic K.  <michaldominik@gmail.com>
+	
+	* patches/:
+	Removing. We don't need patching any longer.
+
+	* LICENSE:
+	Changing name into COPYING to be more generic.
+
+2006-06-13  Michael Dominic K.  <michaldominik@gmail.com>
+
+	* /:
+	Merging the PlastikExperimental code in and upgrading upper level bits
+	to support that. Lot's of changes, sorry. 
+
+	* ChangeLog:
+	Splatting the PlastikExperimental ChangeLog bits along this log. 
+
+2006-06-12  Michael Dominic K.  <michaldominik@gmail.com>
+
+	* src/Gdv/Gdv.ItemGenerator.cs:
+	* src/Gdv/Gdv.Fraction.cs:
+	* src/Gdv/Gdv.Exporter.cs:
+	* src/Gdv/Gdv.Color.cs:
+	* src/Gdv/Gdv.Enums.cs:
+	* src/Gdv/Gdv.ITimeable.cs:
+	* src/Gdv/Gdv.Time.cs:
+	* src/Gdv/Gdv.Handlers.cs:
+	* src/Gdv/Gdv.Application.cs:
+	* src/Gdv/Gdv.PhotoItem.cs:
+	* src/Gdv/Gdv.Glue.cs:
+	* src/Gdv/Gdv.Source.cs:
+	* src/Gdv/SConscript:
+	* src/Gdv/Gdv.Pipeline.cs:
+	* src/Gdv/Gdv.Inspector.cs:
+	* src/Gdv/Gdv.AudioItem.cs:
+	* src/Gdv/Gdv.AVItem.cs:
+	* src/Gdv/Gdv.Clip.cs:
+	* src/Gdv/Gdv.IFileBased.cs:
+	* src/Gdv/Gdv.ImageSheep.cs:
+	* src/Gdv/Gdv.ProjectFormat.cs:
+	* src/Gdv/Gdv.MediaItem.cs:
+	* src/Gdv/Gdv.AudioFormat.cs:
+	* src/Gdv/Gdv.Exceptions.cs:
+	* src/Gdv/Gdv.SheepSource.cs:
+	* src/Gdv/Gdv.Track.cs:
+	* src/Gdv/Gdv.Sheep.cs:
+	* src/Gdv/Gdv.ClipStore.cs:
+	* src/Gdv/Gdv.DecodeBin.cs:
+	* src/Gdv/Gdv.VideoFormat.cs:
+	* src/Gdv/Gdv.TimeSpan.cs:
+	* src/Gdv/Gdv.IThumbnailable.cs:
+	* src/Gdv/Gdv.Args.cs:
+	* src/Gdv/Gdv.FrameDimensions.cs:
+	Bringing in the -sharp bindings for Gdv.
+
+2006-06-12  Michael Dominic K.  <michaldominik@gmail.com>
+
+	* src/Gdv/GdvSingleViewBinPrivate.h:
+	* src/Gdv/GdvTwinViewBin.c:
+	* src/Gdv/GdvTwinViewBin.h:
+	* src/Gdv/GdvTwinCompSink.c:
+	* src/Gdv/GdvTwinCompSink.h:
+	* src/Gdv/SConscript:
+	* src/Gdv/GdvPipeline.c:
+	* src/Gdv/GdvPipeline.h:
+	* src/Gdv/GdvSingleViewBin.c:
+	* src/Gdv/GdvTwinViewBinPrivate.h:
+	* src/Gdv/GdvSingleViewBin.h:
+	* src/Gdv/GdvTwinCompSinkPrivate.h:
+	* src/Gdv/GdvExporter.c:
+	* src/Gdv/GdvExporter.h:
+	* src/Gdv/GdvPipelinePrivate.h:
+	* src/Gdv/GdvExporterPrivate.h:
+	Merging-in the remaining (active) Gdv elements.
+
+2006-06-12  Michael Dominic K.  <michaldominik@gmail.com>
+
+	* src/Gdv/GdvTrack.c:
+	Replace flushing seeks with normal segment-seeks (where possible). 
+	Flush flags are added by sub-elements where needed.
+
+	* src/Gdv/GdvDecodeBin.c:
+	Force (add) the flush flag for initial seek events.
+
+2006-06-11  Michael Dominic K.  <michaldominik@gmail.com>
+
+	* test/TrackPlayer/TrackPlayer.c:
+	Adding a photo.
+
+	* src/Gdv/SConscript:
+	* src/Gdv/GdvPhotoItem.c:
+	* src/Gdv/GdvPhotoItem.h:
+	Merging back the photo item.
+
+	* src/Gdv/GdvItemGenerator.h:
+	* src/Gdv/GdvItemGenerator.c:
+	Uncommenting the code to create photo items from jpegs/pngs.
+
+	* src/Gdv/GdvSourcePad.c:
+	Don't break when setting length == 0.
+
+	* src/Gdv/GdvCompSink.c:
+	Always return TRUE from the seek event on src pad. Returning FALSE
+	breaks the sink.
+
+2006-06-11  Michael Dominic K.  <michaldominik@gmail.com>
+
+	* src/Gdv/GdvSheepSourcePrivate.h:
+	* src/Gdv/GdvSheepSource.c:
+	* src/Gdv/GdvSheepSource.h:
+	* src/Gdv/SConscript:
+	Bringing back the GdvSheepSource.
+	Upgrading to new (private etc.) coding style.
+
+	* src/Gdv/GdvSheep.c:
+	Fixing a possible constructor problem.
+
+2006-06-11  Michael Dominic K.  <michaldominik@gmail.com>
+
+	* src/Gdv/GdvImageSheepPrivate.h:
+	* src/Gdv/GdvImageSheep.c:
+	* src/Gdv/GdvImageSheep.h:
+	* src/Gdv/SConscript:
+	Bringing back the image sheep.
+
+2006-06-11  Michael Dominic K.  <michaldominik@gmail.com>
+
+	* test/TrackPlayer/TrackPlayer.c:
+	Send just one seek event to the pipeline instead of sending an extra
+	seek directly to the track.
+
+	* src/Gdv/GdvTrack.c:
+	* src/Gdv/GdvTrackPrivate.h:
+	Add an event-probe on the src pads to listen for seeks. Process them
+	using the element function.
+
+	* src/Gdv/GdvCompSink.c:
+	Don't anihilate the incoming seek events, but forward them to all
+	input pads instead.
+
+2006-06-10  Michael Dominic K.  <michaldominik@gmail.com>
+
+	* test/TrackPlayer/TrackPlayer.c:
+	Fixing some compilation warnings. 
+
+	* src/Gdv/GdvTrack.c:
+	* src/Gdv/GdvTrackPrivate.h:
+	Fixing some compilation warnings and removing the dead bits of code. 
+
+2006-06-10  Michael Dominic K.  <michaldominik@gmail.com>
+
+	* src/Gdv/GdvIdleTower.c:
+	Fixing an infinite loop bug during item finalization.
+
+	* src/Gdv/GdvSourcePad.h:
+	* src/Gdv/GdvSourcePad.c:
+	Adding the function to untarget (remove target) a SourcePad. 
+
+	* src/Gdv/GdvSource.c:
+	Untarget pads if NULL passed to set target.
+
+	* src/Gdv/GdvTrack.c:
+	Move clips into NULL instead of READY (when going out of scope). 
+	Add better seeking.
+
+	* src/Gdv/GdvDecodeBin.c:
+	Untarget the pads when going into NULL.
+	Dispose the queues when goiing into NULL.
+
+	* src/Gdv/GdvClip.c:
+	Dont send the initial event to source when going into READY.
+
+2006-06-09  Michael Dominic K.  <michaldominik@gmail.com>
+
+	* SConstruct:
+	Temporarily removing the PathDirCreate that borks on older SCons
+	versions.
+
+2006-06-08  Michael Dominic K.  <michaldominik@gmail.com>
+
+	* src/Gdv/GdvIdleTower.c:
+	* src/Gdv/GdvIdleTower.h:
+	* src/Gdv/GdvIdleTowerPrivate.h:
+	Adding a function to check if action with a given gid is schedlued.
+
+	* src/Gdv/GdvTrack.c:
+	If there is a seek action schedlued do not schedule the segment-done
+	action in sync handler on segment-done message.
+
+2006-06-08  Michael Dominic K.  <michaldominik@gmail.com>
+
+	* test/TrackPlayer/TrackPlayer.c:
+	* test/TrackPlayer/TrackPlayer.h:
+	Pause/resume the playback on space. 
+
+	* src/Gdv/GdvClip.c:
+	* src/Gdv/GdvClip.h:
+	Don't touch the killer switched on gates.
+	Re-enable to commented-out track/parent props.
+
+	* src/Gdv/GdvClipGate.c:
+	* src/Gdv/GdvClipGate.h:
+	* src/Gdv/GdvClipGatePrivate.h:
+	Removing the external func to set the flush-killer switch. 
+	Turn on the switch on PAUSED -> READY and turn off on first buffer
+	received.
+
+2006-06-08  Michael Dominic K.  <michaldominik@gmail.com>
+
+	* src/Gdv/GdvTrack.c:
+	* src/Gdv/GdvTrackPrivate.h:
+	Before seeking, abort all pending seek/segment-done actions.
+
+	* src/Gdv/GdvIdleTower.c:
+	* src/Gdv/GdvIdleTower.h:
+	Adding an option to wipe (abort) pending actions based on GID. 
+
+2006-06-06  Michael Dominic K.  <michaldominik@gmail.com>
+
+	* test/TrackPlayer/TrackPlayer.c:
+	* test/TrackPlayer/TrackPlayer.h:
+	Adding the pausing/unpauing via space key.
+
+2006-06-06  Michael Dominic K.  <michaldominik@gmail.com>
+
+	* test/TrackPlayer/TrackPlayer.c:
+	* test/TrackPlayer/TrackPlayer.h:
+	Adding a real player-like seeking functionality via motion keys to
+	TrackPlayer.
+
+2006-06-05  Michael Dominic K.  <michaldominik@gmail.com>
+
+	* src/Gdv/GdvDecodeBin.c:
+	It very much seems now, that the GstDecodeBin is not loosing pads when
+	going into ready. Nice. Might require some more fixes here and there.
+
+2006-06-05  Michael Dominic K.  <michaldominik@gmail.com>
+
+	* src/Gdv/GdvCorrector.c:
+	* src/Gdv/GdvCorrector.h:
+	Adding a function to reset the corrector.
+
+	* src/Gdv/GdvTrack.c:
+	Reset the corrector on flush-seek.
+
+2006-06-05  Michael Dominic K.  <michaldominik@gmail.com>
+
+	* src/Gdv/GdvClipGate.c:
+	* src/Gdv/GdvClipGatePrivate.h:
+	* src/Gdv/GdvClipGate.h:
+	Adding a killer switch to turn on/off the flush-msg killing.
+
+	* src/Gdv/GdvClip.c:
+	Turn on/off the killer switch on clipgate.
+	Fix the order of event sending (seek) during state changes.
+
+	* src/Gdv/GdvDecodeBin.c:
+	Call the stock send-event function when running.
+
+2006-06-05  Michael Dominic K.  <michaldominik@gmail.com>
+
+	* src/Gdv/GdvSource.c:
+	* src/Gdv/GdvSourceProtected.c:
+	Adding a stock send_event function that forwards events to one (or
+	two) pads.
+
+2006-06-05  Michael Dominic K.  <michaldominik@gmail.com>
+
+	* test/TrackPlayer/TrackPlayer.c:
+	* test/TrackPlayer/TrackPlayer.h:
+	Adding a primitive method to manipulate (seek) the track with cursor
+	keys.
+
+	*  src/Gdv/GdvTrackPrivate.c:
+	*  src/Gdv/GdvTrack.c:
+	Adding the preliminary support for flushing seeks.
+
+2006-06-05  Michael Dominic K.  <michaldominik@gmail.com>
+
+	* src/Gdv/GdvFraction.c:
+	* src/Gdv/GdvFraction.h:
+	* src/Gdv/Gdv.Fraction.cs:
+	* test/Gdv.NUnit/Gdv.NUnit.FractionTest.cs:
+	Adding a new function, binding and a test for thansen (returns the
+	frame digit).
+
+2006-06-03  Travis Glenn Hansen  <travisghansen@gmail.com>
+
+	* src/Diva.Editor.Gui/Diva.Editor.Gui.StatusHBox.cs:
+	* src/Diva.Editor.Gui/Diva.Editor.Gui.CounterButton.cs:
+	* src/Diva.Editor.Gui/Diva.Editor.Gui.JumpToWindow.cs:
+	* src/Diva.Editor.Gui/Diva.Editor.Gui.MoveToHBox.cs:
+	Added some spinners to the StatusHBox.
+	Cleaned up some hard-coded Fractions to use the project fps.
+
+2006-06-03  Travis Glenn Hansen  <travisghansen@gmail.com>
+
+	* src/Diva.Editor.Gui/Diva.Editor.Gui.StatusHBox.cs:
+	* src/Diva.Editor.Gui/Diva.Editor.Gui.JumpToWindow.cs:
+	Added listener for CounterButton.
+	Implemented JumpToWindow.
+
+2006-06-02  Travis Glenn Hansen  <travisghansen@gmail.com>
+
+	* src/Diva.Util/Diva.Util.IOFu.cs:
+	Removed Mono.Unix and Mono.Unix.Native dependency.
+
+2006-05-27  Michael Dominic K.  <michaldominik@gmail.com>
+
+	* test/TrackPlayer/TrackPlayer.c:
+	* test/TrackPlayer/TrackPlayer.h:	
+	Use more media files to build the test pipeline (update the svn media
+	test repo).
+	Slight pipeline adjustments.
+
+	* src/Gdv/GdvTrack.c:
+	* src/Gdv/GdvTrack.h:
+	* src/Gdv/GdvTrackPrivate.h:	
+	Do clip relinking on segment-done via idle (tower).
+	Lot's of other experiments.
+	
+	* src/Gdv/GdvTypes.h:
+	* src/Gdv/GdvCorrector.c:
+	* src/Gdv/GdvCorrector.h:	
+	* src/Gdv/GdvCorrectorPrivate.h:		
+	Introducing a timestamp corrector element to fix some problems with
+	innaccurate seeking in certain plugins. Not a perfect solution. Sits
+	in the GdvTrack.
+
+	* src/Gdv/GdvClipGate.c:
+	Temporarily killing all flush events.
+
+	* src/Gdv/GdvSilentSheep.c:
+	Warning fix.
+
+	* src/Gdv/GdvAudioFormat.c: 
+	* src/Gdv/GdvAudioFormat.h:
+	* src/Gdv/GdvVideoFormat.c: 
+	* src/Gdv/GdvVideoFormat.h:	
+	Making the default (unset) format equal to PAL. Makes things easier.
+	Fixing a TOTALLY nasty bug with pixel-ascpect-ratio property returning
+	wrong values.
+
+	* src/Gdv/GdvAudioBuffer.c: 
+	* src/Gdv/GdvAudioBuffer.h:
+	Merging the recent ptlo's volume changes.
+
+	* src/Gdv/GdvBlackSheep.c: 
+	* src/Gdv/GdvBlackSheepPrivate.c:
+	Adding some defines to affect the generation of buffers (for debug).
+	Increasing the buffer size (for debug, temporary)
+
+	* src/Gdv/gdv.h:
+	More includes for TrackPlayer.
+
+	* src/Gdv/GdvVideoCompSink.c: 
+	* src/Gdv/GdvVideoCompSink.h: 
+	* src/Gdv/GdvVideoCompSinkPrivate.h: 
+	* src/Gdv/GdvAudioCompSink.c: 
+	* src/Gdv/GdvAudioCompSink.h: 
+	* src/Gdv/GdvAudioCompSinkPrivate.h: 	
+	* src/Gdv/GdvAudioBoy.c: 
+	* src/Gdv/GdvAudioBoy.h: 
+	* src/Gdv/GdvAudioBoyPrivate.h: 	
+	* src/Gdv/GdvVideoBoy.c: 
+	* src/Gdv/GdvVideoBoy.h: 
+	* src/Gdv/GdvVideoBoyPrivate.h: 	
+	* src/Gdv/GdvCompSink.c: 
+	* src/Gdv/GdvCompSink.h: 
+	* src/Gdv/GdvCompSinkPrivate.h: 		
+	Bringing the compsinks in and all the compositing crowd.
+	Fixing the behaviour during new-segments in compsink (don't marks us
+	as needing a new-segment).
+	Adding a warning/protection against buffers sent with null-caps.
+	Probably broken plugins (ogg sends some close to the end of segment).
+
+	* src/Gdv/GdvIdleTower.c: 
+	Fixing an infinite loop when finalizing items during a wipe.
+
+2006-05-26  Michael Dominic K.  <michaldominik@gmail.com>
+
+	* src/Gdv/GdvClipStorePrivate.h: 
+	* src/Gdv/GdvClipStore.c:
+	Naming/style fix.
+
+2006-05-26  Michael Dominic K.  <michaldominik@gmail.com>
+
+	* src/Gdv/GdvDecodeBin.c:
+	* src/Gdv/GdvDecodeBinPrivate.h:
+	Adding a hack to fix the problem with segment-done messages.
+	Segment-done is cached and re-posted when the actual queue get
+	exhausted. This way segment-done is posted outside ONLY when the
+	element has actually stopped streaming. This is a GStreamer decodebin
+	limitation, due to be fixed in future versions. The current hack
+	should not break/conflict with the future fix. Still needs some code
+	to handle seeks/state changes correctly. 
+
+2006-05-25  Michael Dominic K.  <michaldominik@gmail.com>
+
+	* test/TrackPlayer/TrackPlayer.c: 
+	Fixing string formatting.
+
+	* src/Gdv/GdvInspector.h: 
+	* src/Gdv/GdvInspector.c: 
+	Fixing a lockage bug during inspecting. 
+	Preventing the inspecting_done from being sent twice.
+
+2006-05-25  Michael Dominic K.  <michaldominik@gmail.com>
+
+	* src/Diva.Editor.Gui/Diva.Editor.Gui.TimelineHScrollbar.cs:
+	Improving the timeline scrolling performance by utilizing a simple
+	timeout trick to limit the number of redraws.
+
+2006-05-24  Michael Dominic K.  <michaldominik@gmail.com>
+
+	* src/Gdv/gdv.h:
+	The great return of GdvTrack.
+
+	* src/Gdv/GdvTrack.c:
+	* src/Gdv/GdvTrack.h:
+	* src/Gdv/GdvTrackPrivate.h:
+	Bringing to track back.
+	Commenting-out a lot of code, will be reworked step-by-step.
+	Replacing BumperStamper with an identity for now (will require a
+	jitter corrector in a long run).
+	Introducing a method that rebuilds the track on startup.
+
+	* test/TrackPlayer/: 
+	* bin/trackplayer.sh:
+	Adding the trackplayer test-program. It builds a simple GdvTrack using
+	the test-media repository files aligned one after another. It's played
+	using the standard sinks.
+	
+2006-05-23  Michael Dominic K.  <michaldominik@gmail.com>
+
+	* src/Gdv/GdvClip.c:
+	* src/Gdv/GdvClip.h:
+	* src/Gdv/GdvClipPrivate.h:
+	Adding the gates, removing the old clip ghost pads.
+	Update gates on clip params change.
+	Use the seek-translation routines from gates.
+
+	* src/Gdv/GdvClipPad.c: 
+	* src/Gdv/GdvClipPad.h: 
+	* src/Gdv/GdvClipPadOverlay.c: 
+	* src/Gdv/GdvClipPadOverlay.h: 
+	Removing, obsoleted by GdvClipGate.
+
+	* src/Gdv/GdvTypes.h:
+	* src/Gdv/GdvClipGate.c: 
+	* src/Gdv/GdvClipGate.h: 
+	* src/Gdv/GdvClipGatePrivate.h: 
+	The gate that takes-over the functionality of GdvClipPad,
+	GdvClipPadPverlay and GdvBumperStamper.
+	
+2006-05-22  Michael Dominic K.  <michaldominik@gmail.com>
+
+	* src/Diva.Editor.Gui/Diva.Editor.Gui.StuffVBox.cs: 
+	* src/Diva.Config/Diva.Config.Projects.cs: 
+	Changing the behaviour if no key present (don't set path).
+
+	* src/Diva.Util/Diva.Util.IOFu.cs: 
+	Adding a new routine to check if directory present and readable.
+
+2006-05-22  Travis Glenn Hansen  <travisghansen@gmail.com>
+
+	* src/Diva.Config/Diva.Config.Projects.cs:
+	* src/Diva.Editor.Gui/Diva.Editor.Gui.StuffVBox.cs:
+	Remember last used directory for adding media.
+
+
+2006-05-22  Michael Dominic K.  <michaldominik@gmail.com>
+
+	* src/Diva.Editor.Timeline/Diva.Editor.Timeline.TrackLinesElement.cs:
+	Fixing the tiny drawing artifacts caused by the cairo AA.
+
+2006-05-22  Michael Dominic K.  <michaldominik@gmail.com>
+
+	* src/Diva.Editor.Gui/Diva.Editor.Gui.TimelineVBox.cs: 
+	Removing the old volume scale.
+
+	* src/Diva.Editor.Gui/Diva.Editor.Gui.VolumeButton.cs: 
+	* src/Diva.Editor.Gui/Diva.Editor.Gui.VolumePopupWindow.cs: 
+	* src/Diva.Editor.Gui/Diva.Editor.Gui.TogglesHBox.cs: 
+	* SConstruct:
+	Adding a new pop-up volume control, gnome-style. 
+
+	* src/Diva.Editor.Model/Diva.Editor.Model.Handlers.cs: 
+	* src/Diva.Editor.Model/Diva.Editor.Model.Args.cs: 
+	* src/Diva.Editor.Model/Diva.Editor.Model.Pipeline.cs: 
+	Adding a model event for pipeline volume changes.
+
+	* src/Gdv/GdvPipeline.c:
+	* src/Gdv/GdvPipelinePrivate.h:
+	Removing the volume variable. 
+	Get/set volume funcs just forward things.
+	
+	* src/Gdv/GdvAudioBoy.c: 
+	* src/Gdv/GdvAudioBoy.h: 
+	Adding a get_volume function.
+	Adding mutex locking for set_volume.
+
+	* src/Gdv/GdvAudioCompSink.c: 
+	* src/Gdv/GdvAudioCompSink.h: 
+	Adding a get_volume function (forwards audioboy volume).
+
+2006-05-22  Michael Dominic K.  <michaldominik@gmail.com>
+
+	* src/Gdv/GdvDecodeBin.c:
+	Fixing one startup deadlock (wrong mutexing).
+
+2006-05-22  Michael Dominic K.  <michaldominik@gmail.com>
+
+	* src/Gdv/GdvAudioFormat.c:
+	* src/Gdv/GdvVideoFormat.c:
+	Tiny fix in finalize/dispose.
+
+2006-05-20  Michael Dominic K.  <michaldominik@gmail.com>
+
+	* src/Gdv/GdvClipStore.c:
+	* src/Gdv/GdvClipStore.h:
+	* src/Gdv/GdvClipStorePrivate.h:
+	Bringing the GdvClipStore in.
+
+2006-05-20  Michael Dominic K.  <michaldominik@gmail.com>
+
+	* INSTALL:
+	Formatting fixes.
+
+2006-05-20  Michael Dominic K.  <michaldominik@gmail.com>
+
+	* src/Diva.Editor.Gui/Diva.Editor.Gui.MenuBar.cs: 
+	Fixing a casing for a menu item.
+	Adding a horizontal menu separator.
+
+2006-05-20  Michael Dominic K.  <michaldominik@gmail.com>
+
+	* src/Diva.MainMenu/Resources/Splash.png:
+	Modified splash image.
+
+	* src/Diva.MainMenu/Diva.MainMenu.Window.cs: 
+	The window will expand if components can't fit in.
+
+	* src/Diva.MainMenu/Diva.MainMenu.NewProjectVBox.cs: 
+	* src/Diva.MainMenu/Diva.MainMenu.OpenProjectVBox.cs: 
+	* src/Diva.MainMenu/Diva.MainMenu.WelcomeVBox.cs: 
+	* src/Diva.MainMenu/Diva.MainMenu.SplashVBox.cs: 
+	Moving the border width to Window (12px instead of 6)
+	
+	* src/Diva.MainMenu/Diva.MainMenu.SplashDrawingArea.cs:
+	Changing splash dimensions to 320x380 pixels.
+
+2006-05-17  Michael Dominic K.  <michaldominik@gmail.com>
+
+	* src/Gdv/:
+	* src/Gdv/SConscript: 
+	Bringing the sheeps in.
+
+2006-05-17  Michael Dominic K.  <michaldominik@gmail.com>
+
+	* src/Gdv/GdvDecodeBin.c:
+	* src/Gdv/GdvDecodeBinPrivate.c:
+	Adding a pad event probe to kill the new-segment events before first
+	seek.
+
+2006-05-17  Michael Dominic K.  <michaldominik@gmail.com>
+
+	* src/Diva.Plugins/Theora/DivaPluginsTheoraExporter.c:
+	* src/Diva.Plugins/Theora/DivaPluginsTheoraExporterPrivate.h:
+	* src/Diva.Plugins/Theora/Diva.Plugins.Theora.Dialog.cs: 
+	Removing the second audio converter from exporter.  Making only the
+	audio sample rate selectable param. Other doesn't make sense in the
+	ogg context.  
+	Slight HIG fixes.
+
+2006-05-17  Michael Dominic K.  <michaldominik@gmail.com>
+
+	* NEWS:
+	* SConstruct: 
+	If installation paths are not present, create them. Nasty bug for
+	packagers
+
+2006-05-17  Michael Dominic K.  <michaldominik@gmail.com>
+
+	* src/Diva.Editor.Gui/Diva.Editor.Gui.Window.cs: 
+	Start with the saved geometry, if possible. If not, maximize.
+
+	* src/Diva.MainMenu/Diva.MainMenu.Model.cs: 
+	Save the geometry of the editor window on quit/exit.
+
+	* src/Diva.Config/Diva.Config.Ui.cs: 
+	Adding the main editor window geometry property/gconf key.
+
+2006-05-15  Travis Hansen  <travisghansen@gmail.com>
+
+	* NEWS:	
+	* src/Diva.Editor.Gui/Diva.Editor.Gui.MenuBar.cs:
+	A menu option to wipe the uundo/redo stack.
+
+2006-05-16  Michael Dominic K.  <michaldominik@gmail.com>
+
+	* src/Gdv/GdvDecodeBin.c (change_state):
+	Removing a silly debug message.
+
+	* src/Gdv/GdvClip.c:
+	* src/Gdv/GdvClip.h:
+	* src/Gdv/GdvClipPrivate.h:
+	Fixing some private code, adding the inital seek in state-change. 
+	Moving some more functions to proper style. 
+	Not finished yet.
+
+	* test/ClipPlayer/ClipPlayer.c:
+	* test/ClipPlayer/ClipPlayer.h:
+	Introducing a ClipPlayer. Works like SourcePlayer but using a GdvClip
+	object.
+
+	* src/Gdv/gdv.h: 
+	GdvClip, GdvMediaItem, GdvItemGenerator back to includes.
+
+2006-05-16  Michael Dominic K.  <michaldominik@gmail.com>
+
+	* src/Gdv/GdvItemGenerator.c: 
+	* src/Gdv/GdvItemGeneratorPrivate.c: 
+	Bringing in.
+	Moving some bits to private.
+	Temporarily disabling photo items.
+
+2006-05-16  Michael Dominic K.  <michaldominik@gmail.com>
+
+	* src/Gdv/GdvThumbnailableInterface.c:
+	* src/Gdv/GdvThumbnailableInterface.h:
+	* src/Gdv/GdvFrameableInterface.c:
+	* src/Gdv/GdvFrameableInterface.h:
+	Fixing the coding style.
+
+	* src/Gdv/SConscript: 
+	* src/Gdv/:
+	Bringing some more objects back in to make items work.
+
+2006-05-16  Michael Dominic K.  <michaldominik@gmail.com>
+
+	* src/Gdv/GdvDecodeBin.c:
+	* src/Gdv/GdvDecodeBinPrivate.h:
+	Adding an extra mutex/cond to make sure that state change happens
+	after no-more-pads.
+	Swapping the order of things in change_state.
+
+2006-05-16  Michael Dominic K.  <michaldominik@gmail.com>
+
+	* src/Gdv/GdvClipPad.c:
+	Fixing for new clip func names.
+
+	* src/Gdv/GdvClip.c:
+	* src/Gdv/GdvClipPrivate.c:
+	* src/Gdv/GdvClip.h:
+	Moving to new coding style/private style. Not complete yet.
+	Temporarily disabling some props. 
+	Killing a lot of old code.
+
+	* src/:	
+	Bringing the clip & related items back in.
+
+2006-05-15  Michael Dominic K.  <michaldominik@gmail.com>
+
+	* src/Diva.Core/Diva.Core.Commander.cs: 
+	* src/Diva.Editor.Model/Diva.Editor.Model.CommandProcessor.cs: 
+	Adding a func + model implementation to flush the undo/redo stack.
+
+2006-05-15  Michael Dominic K.  <michaldominik@gmail.com>
+
+	* src/Gdv/GdvTimeableInterface.c:
+	* src/Gdv/GdvTimeableInterface.h:
+	Coding style fixes.
+
+2006-05-15  Michael Dominic K.  <michaldominik@gmail.com>
+
+	* src/Gdv/GdvDecodeBin.c:
+	* src/Gdv/GdvDecodeBinPrivate.c:
+	Perform the whole seeking garbage only if we've got an event cached.
+	Do only ONE seek for sources with both audio and video.
+
+	* test/SourcePlayer/SourcePlayer.c: 
+	* test/SourcePlayer/SourcePlayer.h: 
+	Adding a bus callback for the pipeline.
+
+2006-05-14  Michael Dominic K.  <michaldominik@gmail.com>
+
+	* src/Gdv/GdvDecodeBin.c:
+	Adding a few dispose/finalize memory cleanups.
+	Changing the default behaviour of send_event (pass to the internal
+	decodebin)
+	Reset things on state-change.
+
+	* src/Gdv/GdvSource.c (gdv_source_set_length, private_init): 
+	Fixing for GdvSourcePad changes.
+
+	* src/Gdv/GdvSourcePad.c:
+	* src/Gdv/GdvSourcePad.h:
+	* src/Gdv/GdvSourcePadPrivate.h: 
+	Moving to the proper Private code scheme + style fixes.
+	Making get_caps_func return empty caps if target not set (fixes
+	warnings in gst_element_link)
+
+2006-05-14  Michael Dominic K.  <michaldominik@gmail.com>
+
+	* test/SourcePlayer/SourcePlayer.c:
+	* test/SourcePlayer/SourcePlayer.h:
+	Sending the proper seek event in READY.
+
+	* src/Gdv/GdvDecodeBin.c:
+	* src/Gdv/GdvDecodeBin.h:
+	* src/Gdv/GdvDecodeBinPrivate.c:
+	Adding the pad blocking + seek action handling. The events sent in
+	READY are cached and executer later on via idle.
+
+2006-05-14  Michael Dominic K.  <michaldominik@gmail.com>
+
+	* src/Gdv/GdvSourcePad.c (gdv_sourcepad_getcapsfunc): 
+	Fixing a bug where returned caps are returned without a ref. I think
+	that fixes a prob in *Format property.
+
+	* test/SourcePlayer/SourcePlayer.c:
+	* test/SourcePlayer/SourcePlayer.h:
+	* test/SourcePlayer/SConscript:
+	* test/SConscript:
+	* bin/sourceplayer.sh: 
+	Introducing a SourcePlayer test program to play files using
+	GdvDecodeBin.
+	
+	* src/Gdv/GdvDecodeBin.c (private_init): 
+	Fixing a bad pointer reference.
+
+	* src/Gdv/gdv.h: 
+	Temporarily removing some stuff. Full fixture needed here.
+
+2006-05-13  Senko Rasic  <senko@senko.net>
+
+	* NEWS: 
+	News dump.
+
+	* src/Diva.Editor.Model/Diva.Editor.Model.Pipeline.cs:
+	* src/Diva.Editor.Gui/Diva.Editor.Gui.TimelineVBox.cs:
+	Adding a master volume controlling widget and model.
+
+	* src/Gdv/Gdv.Pipeline.cs:
+	* src/Gdv/GdvAudioBoy.c:
+	* src/Gdv/GdvAudioBoy.h:
+	* src/Gdv/GdvAudioBuffer.c:
+	* src/Gdv/GdvAudioBuffer.h:
+	* src/Gdv/GdvAudioCompSink.c:
+	* src/Gdv/GdvAudioCompSink.h:
+	* src/Gdv/GdvPipeline.c:
+	* src/Gdv/GdvPipelinePrivate.h:
+	Master pipeline volume.
+
+
+2006-05-13  Michael Dominic K.  <michaldominik@gmail.com>
+
+	* src/Gdv/GdvDecodeBin.c:
+	* src/Gdv/GdvDecodeBin.h:
+	* src/Gdv/GdvDecodeBinPrivate.h:
+	Moving to the proper Private code scheme.
+	Removing the usage of GErrors and detailed error-reporing in general
+	-- it's useless.
+	Fixing for new GdvSource.
+	
+	* src/Gdv/GdvSourceProtected.h: 
+	* src/Gdv/GdvSource.c: 
+	Adding protected methods to set audio/video format.
+	Adding protected methods to set audio/video target pads.
+	Adding protected methods to set length (also on SourcePads).
+
+	* src/Gdv/GdvIdleTower.c (gdv_idletower_init): 
+	Adding an extra debug message.
+	(gdv_idletower_new): 
+	Fixing a possible error during object build.
+
+	* src/Gdv/SConscript: 
+	Bringing the DecodeBin back into build.
+
+	* src/Gdv/GdvSourcePrivate.h: 
+	Style fixes.
+
+2006-05-13  Michael Dominic K.  <michaldominik@gmail.com>
+
+	* src/Gdv/GdvSource.c:
+	* src/Gdv/GdvSourcePrivate.c:
+	* src/Gdv/GdvSourceProtected.c:
+	* src/Gdv/GdvSource.h:
+	Moving to the proper Private/Protected code scheme.
+	Long-needed Code styling fixes (24->32 spaces)
+
+	* src/Gdv/SConscript:
+	Temporarily excluding GdvDecodeBin from build.
+
+2006-05-13  Michael Dominic K.  <michaldominik@gmail.com>
+
+	* src/Gdv:
+	Wiping all the stuff for the time being to focus on GdvSource.
+
+2006-05-13  Michael Dominic K.  <michaldominik@gmail.com>
+
+	* src/Gdv/GdvIdleTower.c:
+	* src/Gdv/GdvIdleTower.h:
+	* src/Gdv/GdvIdleTowerPrivate.h:
+	* src/Gdv/GdvTypes.h:
+	* src/Gdv/SConscript:
+	Introducing the GdvIdleTower. A idle-queue that makes sure to execute
+	idles in order.
+	Later events can be discarded/cancelled.
+
+2006-05-11  Michael Dominic K.  <michaldominik@gmail.com>
+
+	* src/Gdv:
+	Stripping Gdv# too. Leaving only C code for the time being to play
+	with.
+
+2006-05-11  Michael Dominic K.  <michaldominik@gmail.com>
+
+	* po/:
+	* bin/:
+	* src/:
+	* test/:
+	* sys/:
+	* SConstruct:
+	* MOTD:
+	* patches/:
+	Stripping it all down to leave only Gdv for now. 
+
+2006-05-11  Michael Dominic K.  <michaldominik@gmail.com>
+
+	* trunk/:
+	Branching out to PlastikExperimental branch that will lead to 0.0.3.
+
+2006-05-10  Michael Dominic K.  <michaldominik@gmail.com>
+
+	* po/POTFILES.in: 
+	* po/diva.pot:
+	Regenerate.
+	
+	* src/Diva.Editor.Gui/Diva.Editor.Gui.AboutDialog.cs: 
+	Adding the (possible) translator to the About box/credits.
+
+	* bin/diva-uninstalled.sh:
+	* bin/diva-uninstalled-gdb.sh:
+	* bin/diva-uninstalled-trace.sh: 
+	* bin/inspector-uninstalled.sh: 	
+	Fixing the locale path.
+
+	* bin/diva.in: 
+	* bin/diva-inspector.in:
+	%SHAREDIR%/locale => %LOCALEDIR%
+	Making the scripts simpler.
+
+	* SConstruct: 
+	Ver bump back to trunk.
+	A LOCALEDIR path option for locale base path (default:
+	SHAREDIR/locale)
+	Global locale environment.
+	
+	* AUTHORS (Translators): 
+	* NEWS:
+	* po/SConscript:
+	* po/fr.po: 
+	Adding the French translation by Alexis Deruelle.
+	Making the locales system-wide installable.
+
+=== 0.0.2 RELEASE ===
+
+2006-05-09  Michael Dominic K.  <michaldominik@gmail.com>
+
+	* INSTALL: 
+	Adding an svn attr to keep source browser happy.
+
+2006-05-09  Michael Dominic K.  <michaldominik@gmail.com>
+
+	* po/POTFILES.in: 
+	* po/diva.pot:
+	Regenerate.
+
+	* README: 
+	* INSTALL: 
+	* MOTD: 
+	* SConstruct:
+	* RELEASE: 
+	* NEWS: 
+	Doc/version bump for 0.0.2.
+
+2006-05-09  Michael Dominic K.  <michaldominik@gmail.com>
+
+	* test/Gdv.NUnit/Gdv.NUnit.FormatTest.cs: 
+	Adding a test for the Clone (_clone) function in AudioFormat
+	VideoFormat clone test assert should compare Ptr's. 
+	
+	* src/Gdv/Gdv.AudioFormat.cs: 
+	Binding the _clone function.
+
+	* src/Gdv/GdvAudioFormat.c
+	* src/Gdv/GdvAudioFormat.h: 
+	* src/Gdv/GdvAudioFormatPrivate.h: 
+	Moving the private code into Private part, as seen in #39.
+	Adding a _clone function that clones/copies the format by copying the
+	caps.
+
+2006-05-08  Michael Dominic K.  <michaldominik@gmail.com>
+
+	* ChangeLog: Starting a ChangeLog. Let's use it.

@@ -1,0 +1,34 @@
+import                          os;
+Import                          ('divaEnv');
+Import                          ('shellEnv');
+
+env = divaEnv.Copy              ();
+
+env.Append                      (RESOURCE = Split ('Resources/diva96.png \
+                                                    Resources/diva48.png \
+                                                    Resources/diva24.png \
+                                                    Resources/diva16.png \
+                                                    Resources/diva12.png'));
+
+sources = Split                 ('AssemblyInfo.cs \
+                                  Diva.Util.VersionFu.cs \
+                                  Diva.Util.IconFu.cs \
+                                  Diva.Util.GtkFu.cs \
+                                  Diva.Util.TimeFu.cs \
+                                  Diva.Util.StringFu.cs \
+                                  Diva.Util.XmlFu.cs \
+                                  Diva.Util.Stub.cs \
+                                  Diva.Util.OtherFu.cs \
+                                  Diva.Util.IOFu.cs');
+
+assemblyInfo = shellEnv.Subst   ('AssemblyInfo.cs', '#common/AssemblyInfo.cs.in')
+
+util = env.Dll                  ('util.dll', sources);
+
+env.Depends                     (util, assemblyInfo);
+
+# INSTALL ######################################################################
+
+Alias                           ("install", env.Install (os.path.join (env ['DESTDIR'], 
+                                                                       env ['LIBDIR'],
+                                                                       'diva'), util));

@@ -1,0 +1,9 @@
+import                  os;
+Import                  ('shellEnv');
+
+diva = shellEnv.Subst   ('diva', 'diva.in')
+Alias                   ("install", shellEnv.Install (os.path.join (shellEnv ['DESTDIR'], shellEnv ['BINDIR']), diva))
+
+divaInspector = shellEnv.Subst ('diva-inspector', 'diva-inspector.in')
+Alias                   ("install", shellEnv.Install (os.path.join (shellEnv ['DESTDIR'], shellEnv ['BINDIR']), divaInspector))
+

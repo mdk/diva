@@ -1,0 +1,27 @@
+import                          os;
+Import                          ('divaEnv');
+Import                          ('shellEnv');
+
+env = divaEnv.Copy              ();
+
+env.Append                      (REF = Split ('#src/Diva.Util/util.dll \
+                                               #src/Diva.Widgets/widgets.dll \
+                                               #src/Diva.Core/core.dll'));
+
+sources = Split                 ('AssemblyInfo.cs \
+                                  Diva.PluginLib.Plugin.cs \
+                                  Diva.PluginLib.ExportPlugin.cs \
+                                  Diva.PluginLib.PluginManager.cs \
+                                  Diva.PluginLib.TypeEnumerator.cs');
+
+assemblyInfo = shellEnv.Subst   ('AssemblyInfo.cs', '#common/AssemblyInfo.cs.in')
+
+pluginlib = env.Dll             ('pluginlib.dll', sources);
+
+env.Depends                     (pluginlib, assemblyInfo);
+
+# INSTALL ######################################################################
+
+Alias                           ("install", env.Install (os.path.join (env ['DESTDIR'], 
+                                                                       env ['LIBDIR'],
+                                                                       'diva'), pluginlib));

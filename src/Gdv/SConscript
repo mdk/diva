@@ -1,0 +1,126 @@
+import                          os;
+Import                          ('CEnv');
+Import                          ('monoEnv');
+Import                          ('shellEnv');
+
+# C ############################################################################
+
+localEnvC = CEnv.Copy           ();
+localEnvC.Append                (CPPPATH='.',
+                                 CCFLAGS = Split ('-DG_LOG_DOMAIN=\\\"Gdv\\\"'),
+                                 LIBS = Split ('gstinterfaces-0.10'));
+            
+sourcesC = Split                ('GdvUtil.c \
+                                  GdvMain.c \
+                                  GdvFrameDimensions.c \
+                                  GdvColor.c \
+                                  GdvGlue.c \
+                                  GdvTime.c \
+                                  GdvTimeSpan.c \
+                                  GdvSource.c \
+                                  GdvErrors.c \
+                                  GdvInspector.c \
+                                  GdvDecodeBin.c \
+                                  GdvVideoFormat.c \
+                                  GdvClip.c \
+                                  GdvTimeableInterface.c \
+                                  GdvMediaItem.c \
+                                  GdvAudioItem.c \
+                                  GdvAVItem.c \
+                                  GdvItemGenerator.c \
+                                  GdvFrameRunner.c \
+                                  GdvToken.c \
+                                  GdvJob.c \
+                                  GdvClipGate.c \
+                                  GdvSheep.c \
+                                  GdvSheepSource.c \
+                                  GdvImageSheep.c \
+                                  GdvBlackSheep.c \
+                                  GdvSilentSheep.c \
+                                  GdvFrameRunnerJobData.c \
+                                  GdvJobProcessor.c \
+                                  GdvJobQueue.c \
+                                  GdvFrameableInterface.c \
+                                  GdvThumbnailableInterface.c \
+                                  GdvAudioFormat.c \
+                                  GdvPixbufSink.c \
+                                  GdvExporter.c \
+                                  GdvPipeline.c \
+                                  GdvTwinCompSink.c \
+                                  GdvTwinViewBin.c \
+                                  GdvSingleViewBin.c \
+                                  GdvPhotoItem.c \
+                                  GdvBufferUtil.c \
+                                  GdvCorrector.c \
+                                  GdvCompSink.c \
+                                  GdvAudioCompSink.c \
+                                  GdvVideoCompSink.c \
+                                  GdvVideoBoy.c \
+                                  GdvAudioBoy.c \
+                                  GdvClipStore.c \
+                                  GdvTrack.c \
+                                  GdvSourcePad.c \
+                                  GdvVideoBuffer.c \
+                                  GdvAudioBuffer.c \
+                                  GdvFraction.c \
+                                  GdvProjectFormat.c \
+                                  GdvFileBasedInterface.c \
+                                  GdvIdleTower.c');
+
+gdv = localEnvC.SharedLibrary   ('libgdv', sourcesC);
+
+# MONO #########################################################################
+
+assemblyInfo = shellEnv.Subst    ('AssemblyInfo.cs', '#common/AssemblyInfo.cs.in')
+
+sourcesMono = Split              ('AssemblyInfo.cs \
+                                   Gdv.FrameDimensions.cs \
+                                   Gdv.Application.cs \
+                                   Gdv.Time.cs \
+                                   Gdv.TimeSpan.cs \
+                                   Gdv.Source.cs \
+                                   Gdv.DecodeBin.cs \
+                                   Gdv.Exceptions.cs \
+                                   Gdv.VideoFormat.cs \
+                                   Gdv.AudioFormat.cs \
+                                   Gdv.Inspector.cs \
+                                   Gdv.MediaItem.cs \
+                                   Gdv.AVItem.cs \
+                                   Gdv.AudioItem.cs \
+                                   Gdv.PhotoItem.cs \
+                                   Gdv.ITimeable.cs \
+                                   Gdv.IThumbnailable.cs \
+                                   Gdv.ItemGenerator.cs \
+                                   Gdv.Color.cs \
+                                   Gdv.Clip.cs \
+                                   Gdv.Sheep.cs \
+                                   Gdv.Fraction.cs \
+                                   Gdv.ProjectFormat.cs \
+                                   Gdv.Pipeline.cs \
+                                   Gdv.Glue.cs \
+                                   Gdv.Track.cs \
+                                   Gdv.ImageSheep.cs \
+                                   Gdv.IFileBased.cs \
+                                   Gdv.Enums.cs \
+                                   Gdv.Args.cs \
+                                   Gdv.Exporter.cs \
+                                   Gdv.SheepSource.cs \
+                                   Gdv.ClipStore.cs \
+                                   Gdv.Handlers.cs');
+
+localEnvMono = monoEnv.Copy     (PKG = Split ('gtk-sharp-2.0'));
+
+gdvdll = localEnvMono.Dll       ('gdv.dll', sourcesMono);
+localEnvMono.Depends            (gdvdll, gdv);
+localEnvMono.Depends            (gdvdll, assemblyInfo);
+
+
+# INSTALL ######################################################################
+
+Alias                           ("install", localEnvC.Install (os.path.join (localEnvC ['DESTDIR'], 
+                                                                             localEnvC ['LIBDIR'], 
+                                                                             'diva'), gdv));
+
+Alias                           ("install", localEnvMono.Install (os.path.join (localEnvMono ['DESTDIR'], 
+                                                                                localEnvMono ['LIBDIR'], 
+                                                                                'diva'), gdvdll));

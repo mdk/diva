@@ -1,0 +1,53 @@
+import                          os;
+Import                          ('divaEnv');
+Import                          ('shellEnv');
+
+env = divaEnv.Copy              ();
+
+env.Append                      (REF = Split ('#src/Diva.Util/util.dll \
+                                               #src/Diva.Config/config.dll \
+                                               #src/Diva.Widgets/widgets.dll \
+                                               #src/Diva.Basics/basics.dll'),
+                                 RESOURCE = Split ('Resources/bug.png'));
+
+sources = Split                 ('AssemblyInfo.cs \
+                                  Diva.Core.Stuff.cs \
+                                  Diva.Core.MediaItemStuff.cs \
+                                  Diva.Core.Project.cs \
+                                  Diva.Core.Commander.cs \
+                                  Diva.Core.StuffList.cs \
+                                  Diva.Core.ExportSettings.cs \
+                                  Diva.Core.Tag.cs \
+                                  Diva.Core.TagList.cs \
+                                  Diva.Core.SaverTask.cs \
+                                  Diva.Core.ProjectSpoofer.cs \
+                                  Diva.Core.ExceptionalDialog.cs \
+                                  Diva.Core.ICommand.cs \
+                                  Diva.Core.IUndoableCommand.cs \
+                                  Diva.Core.IMessagingCommand.cs \
+                                  Diva.Core.IRepetitiveCommand.cs \
+                                  Diva.Core.INotUndoableCommand.cs \
+                                  Diva.Core.IPreparableCommand.cs \
+                                  Diva.Core.ITaskPreparableCommand.cs \
+                                  Diva.Core.CommanderException.cs \
+                                  Diva.Core.CoreException.cs \
+                                  Diva.Core.ICursorWaiting.cs \
+                                  Diva.Core.OpenerTask.cs \
+                                  Diva.Core.Stub.cs \
+                                  Diva.Core.Args.cs \
+                                  Diva.Core.Handlers.cs \
+                                  Diva.Core.MediaItemList.cs \
+                                  Diva.Core.TrackList.cs \
+                                  Diva.Core.ClipList.cs');
+
+assemblyInfo = shellEnv.Subst   ('AssemblyInfo.cs', '#common/AssemblyInfo.cs.in');
+
+core = env.Dll                  ('core.dll', sources);
+
+env.Depends                     (core, assemblyInfo);
+
+# INSTALL ######################################################################
+
+Alias                           ("install", env.Install (os.path.join (env ['DESTDIR'], 
+                                                                       env ['LIBDIR'],
+                                                                       'diva'), core));

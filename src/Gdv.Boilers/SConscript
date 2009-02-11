@@ -1,0 +1,34 @@
+import                          os;
+Import                          ('divaEnv');
+Import                          ('shellEnv');
+
+sources = Split                 ('AssemblyInfo.cs \
+                                  Gdv.Boilers.AVItem.cs \
+                                  Gdv.Boilers.VideoFormat.cs \
+                                  Gdv.Boilers.PhotoItem.cs \
+                                  Gdv.Boilers.AudioFormat.cs \
+                                  Gdv.Boilers.AudioItem.cs \
+                                  Gdv.Boilers.DecodeBin.cs \
+                                  Gdv.Boilers.ImageSheep.cs \
+                                  Gdv.Boilers.SheepSource.cs \
+                                  Gdv.Boilers.Track.cs \
+                                  Gdv.Boilers.ProjectFormat.cs \
+                                  Gdv.Boilers.Clip.cs \
+                                  Gdv.Boilers.Pipeline.cs \
+                                  Gdv.Boilers.Common.cs');
+
+env = divaEnv.Copy              ();
+
+env.Append                      (REF = Split ('#src/Diva.Basics/basics.dll'));
+
+assemblyInfo = shellEnv.Subst   ('AssemblyInfo.cs', '#common/AssemblyInfo.cs.in');
+
+boilers = env.Dll               ('gdvboilers.dll', sources);
+
+env.Depends                     (boilers, assemblyInfo);
+
+# INSTALL ######################################################################
+
+Alias                           ("install", env.Install (os.path.join (env ['DESTDIR'], 
+                                                                       env ['LIBDIR'], 
+                                                                       'diva'), boilers));

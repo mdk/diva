@@ -1,0 +1,15 @@
+Import                          ('monoEnv');
+
+sources = Split                 ('Gdv.NUnit.TimeTest.cs \
+                                  Gdv.NUnit.TimeSpanTest.cs \
+                                  Gdv.NUnit.FractionTest.cs \
+                                  Gdv.NUnit.ColorTest.cs \
+                                  Gdv.NUnit.FrameDimensionsTest.cs \
+                                  Gdv.NUnit.InspectorTest.cs \
+                                  Gdv.NUnit.FormatTest.cs');
+
+env = monoEnv.Copy              (REF = Split ('#src/Gdv/gdv.dll'),
+                                 PKG = Split ('mono-nunit \
+                                               gtk-sharp-2.0'));
+
+env.Dll                         ('gdvnunit.dll', sources);

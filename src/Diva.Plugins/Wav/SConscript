@@ -1,0 +1,47 @@
+import                          os;
+Import                          ('CEnv');
+Import                          ('divaEnv');
+Import                          ('shellEnv');
+
+# C ############################################################################
+
+localEnvC = CEnv.Copy           ();
+            
+sourcesC = Split                ('DivaPluginsWavExporter.c');
+
+localEnvC.Append                (CPPPATH='#src/Gdv/',
+                                 LIBS= Split ('gdv'));
+
+wav = localEnvC.SharedLibrary   ('../libwavexporter', sourcesC);
+
+# Mono #########################################################################
+
+localEnvMono = divaEnv.Copy     ();
+
+localEnvMono.Append             (REF = Split ('#src/Diva.PluginLib/pluginlib.dll \
+                                               #src/Diva.Widgets/widgets.dll \
+                                               #src/Diva.Core/core.dll'));
+                                               
+sources = Split                 ('AssemblyInfo.cs \
+                                  Diva.Plugins.Wav.ExportPlugin.cs \
+                                  Diva.Plugins.Wav.Exporter.cs \
+                                  Diva.Plugins.Wav.ExportSettings.cs \
+                                  Diva.Plugins.Wav.Dialog.cs');
+
+assemblyInfo = shellEnv.Subst   ('AssemblyInfo.cs', '#common/AssemblyInfo.cs.in')
+
+wavdll = localEnvMono.Dll       ('../wavexporter.dll', sources);
+
+localEnvMono.Depends            (wavdll, wav);
+localEnvMono.Depends            (wavdll, assemblyInfo);
+
+# INSTALL ######################################################################
+
+Alias                           ("install", localEnvC.Install (os.path.join (localEnvC ['DESTDIR'], 
+                                                                             localEnvC ['LIBDIR'],
+                                                                             'diva', 'plugins'), wav));
+
+Alias                           ("install", localEnvMono.Install (os.path.join (localEnvMono ['DESTDIR'], 
+                                                                                localEnvMono ['LIBDIR'], 
+                                                                                'diva', 'plugins'), wavdll));
+

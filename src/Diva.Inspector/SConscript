@@ -1,0 +1,22 @@
+Import                          ('divaEnv');
+Import                          ('shellEnv');
+import                          os;
+
+env = divaEnv.Copy              ();
+env.Append                      (REF = Split ('#src/Diva.Util/util.dll'));
+
+sources = Split                 ('AssemblyInfo.cs \
+                                  Diva.Inspector.Exe.cs \
+                                  Diva.Inspector.Helper.cs');
+
+assemblyInfo = shellEnv.Subst   ('AssemblyInfo.cs', '#common/AssemblyInfo.cs.in')
+
+divaInspector = env.Exe         ('inspector.exe', sources);
+
+env.Depends                     (divaInspector, assemblyInfo);
+
+# INSTALL ######################################################################
+
+Alias                           ("install", env.Install (os.path.join (env ['DESTDIR'], 
+                                                                       env ['LIBDIR'],
+                                                                       'diva'), divaInspector));
