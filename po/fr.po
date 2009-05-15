@@ -1,0 +1,895 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2006-06-13 15:16+0200\n"
+"PO-Revision-Date: 2006-04-30 11:00+0200\n"
+"Last-Translator: Alexis Deruelle <alexis.deruelle@laposte.net>\n"
+"Language-Team: French\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+msgid "'{0}' and '{1}' were chain-adjusted"
+msgstr "'{0}' et '{1}' enchaînés"
+
+msgid "'{0}' clip was placed at {1}"
+msgstr "La séquence '{0}' a été placée à {1}"
+
+msgid "'{0}' is already in the project"
+msgstr "'{0}' est déjà dans le projet"
+
+msgid "'{0}' tag was applied to '{1}'"
+msgstr "Etiquette '{0}' appliqué à '{1}'"
+
+msgid "'{0}' was added to the project"
+msgstr "'{0}' a été ajouté au projet"
+
+msgid "'{0}' was expanded to fit {1}"
+msgstr "'{0}' étendu à '{1}'"
+
+msgid "'{0}' was left adjusted to {1}"
+msgstr "'{0}' a été ajusté à gauche de {1}"
+
+msgid "'{0}' was moved to {1}"
+msgstr "'{0}' a été placé à {1}"
+
+msgid "'{0}' was track to {1}"
+msgstr "'{0}' a été suivi jusqu'à {1}"
+
+msgid "11 khz"
+msgstr "11 khz"
+
+msgid "16 bit"
+msgstr "16 bit"
+
+msgid "22 khz"
+msgstr "22 khz"
+
+msgid "44.1 khz"
+msgstr "44.1 khz"
+
+msgid "48 khz"
+msgstr "48 khz"
+
+msgid "8 bit"
+msgstr "8 bit"
+
+msgid "8 khz"
+msgstr "8 khz"
+
+msgid "96 khz"
+msgstr "96 khz"
+
+msgid "<b>Welcome to Diva</b>\n"
+msgstr "<b>Bienvenue dans Diva</b>\n"
+
+msgid ""
+"<b>{0}</b>\n"
+"Running time: {1}"
+msgstr ""
+"<b>{0}</b>\n"
+"Temps: {1}"
+
+msgid "<small>Opacity: {0}</small>"
+msgstr "<small>Opacité: {0}</small>"
+
+msgid "Abort all"
+msgstr "Arrêter là"
+
+msgid "Add '{0}' to the project"
+msgstr "Ajout de '{0}' au projet"
+
+msgid "Add clip '{0}' at {1}"
+msgstr "Ajout de '{0}' a {1}"
+
+msgid "Add or import new files to the project"
+msgstr "Ajouter ou importer des fichiers"
+
+msgid "Add {0} files to the project"
+msgstr "Ajout de {0} fichier(s) au projet"
+
+msgid ""
+"Allows to export the final composition to Theora ogg file. Theora is an "
+"efficient open-source video codec optimized for internet streaming"
+msgstr ""
+"Permet d'exporter le résultat du montage au format Ogg-Theora. Theora est un "
+"codec video libre, optimisé pour le streaming"
+
+msgid ""
+"Allows to export the sound of the composition to a WAV file. The resulting "
+"file is a raw, uncompressed file"
+msgstr ""
+"Permet d'exporter la bande son du montage. Le fichier résultant est au "
+"format Wav brut, non compressé"
+
+msgid ""
+"An error occured in the GStreamer processing pipeline. If you're using other "
+"applications that use video/audio output please close them.\n"
+"\n"
+"It's recommended that you save your work now and restart the project as soon "
+"as possible."
+msgstr ""
+"Une erreur est survenue dans le pipeline GStreamer. Si vous utilisez une "
+"autre application accédant à une sortie audio ou vidéo, essayez de l' "
+"arrêter.\n"
+"Il est recommandé d'enregistrer au plus vite votre travail."
+
+msgid ""
+"An unexpected, fatal error occured. Details about the failure were outputed "
+"to the error console. You might optionally save the crash log to a file and "
+"attach it to a bug report. \n"
+"\n"
+"The application is now most likely in an unstable state. You should save "
+"your work as soon as possible"
+msgstr ""
+"Une anomalie s'est produite. Les détails ont étés envoyés vers la console "
+"d'erreur. Vous pouvez éventuellement sauvegarder la trace dans un fichier et "
+"la joindre à un rapport d'anomalie. \n"
+"\n"
+"L'application est probablement devenue instable, pensez à sauvegarder votre "
+"travail au plus tôt"
+
+msgid ""
+"Another project with the same name is present in the directory. Are you sure "
+"that you want to overwrite it?"
+msgstr ""
+"Un projet portant le même nom existe déjà dans le répertoire. Êtes-vous sûr "
+"de vouloir l'écraser?"
+
+msgid "Apply new tag '{0}' to '{1}'"
+msgstr "Applicatiob de l'étiquette '{0}' à '{1}'"
+
+msgid "Apply tag '{0}' to '{1}'"
+msgstr "Applique '{0}' à '{1}'"
+
+msgid "Are you sure that you want to overwrite that file?"
+msgstr "Êtes-vous sûr de vouloir écraser ce fichier?"
+
+msgid "Are you sure you want to clear the history?"
+msgstr "Êtes-vous sûr de vouloir effacer l'historique?"
+
+msgid "Aspect ratio:"
+msgstr "Proportion:"
+
+msgid "Audio format"
+msgstr "Format audio"
+
+msgid "Audio format:"
+msgstr "Format audio:"
+
+msgid "Audio quality:"
+msgstr "Qualité audio:"
+
+msgid "Average"
+msgstr "Moyenne"
+
+msgid "CD quality"
+msgstr "Qualité CD"
+
+msgid "Capture media"
+msgstr "Capture"
+
+msgid "Chain-adjust '{0}' and '{1}'"
+msgstr "Enchaînement de '{0}' et '{1}'"
+
+msgid "Change the media organizing method"
+msgstr "Choisir le type d'organisation"
+
+msgid "Change track opacity to {0}"
+msgstr "Opacifier la piste à {0}"
+
+msgid "Channels:"
+msgstr "Canaux:"
+
+msgid "Clip '{0}' was cutted at {1}"
+msgstr "La séquence '{0}' a été coupée à {1}"
+
+msgid "Clip '{0}' was removed"
+msgstr "La séquence vidéo '{0}' a été supprimée"
+
+msgid "Clip '{0}' was right adjusted to {1}"
+msgstr "'{0}' a été ajusté à droite de {1}"
+
+msgid "Close without saving"
+msgstr "Quitter sans enregistrer"
+
+msgid "Create new tag '{0}'"
+msgstr "Création de l'étiquette '{0}'"
+
+msgid "Create new tag..."
+msgstr "Créer une étiquette..."
+
+msgid "Create or select a folder"
+msgstr "Créer ou choisir un dossier"
+
+msgid "Custom"
+msgstr "Personnalisée"
+
+msgid "Cut clip '{0}' at {1}"
+msgstr "Coupe la séquence '{0}' à {1}"
+
+msgid "Delete tag '{0}'"
+msgstr "Suppression de l'étiquette '{0}'"
+
+msgid "Depth:"
+msgstr "Profondeur:"
+
+msgid "Displays current playback cursor position"
+msgstr "Affiche la position actuelle du curseur"
+
+msgid "Diva"
+msgstr "Diva"
+
+msgid "Diva - {0}"
+msgstr "Diva - {0}"
+
+msgid "Diva projects"
+msgstr "Projets Diva"
+
+msgid "Edit tag"
+msgstr "Editer l'étiquette"
+
+msgid "Edit tag '{0}' ('{1}')"
+msgstr "Edition de l'étiquette '{0}' ('{1}')"
+
+msgid ""
+"Element '%s' is not availible in your GStreamer installation. Please check "
+"that necessary plugins are installed."
+msgstr ""
+"L'élément '%s' n'est pas disponible dans la version de GStreamer installée. "
+"Vérifiez que tous les plugins soient installés."
+
+msgid "Empty name"
+msgstr "Nom vide"
+
+msgid "Error details"
+msgstr "Détails de l'anomalie"
+
+msgid "Error while loading plugin assembly {0}"
+msgstr "Erreur de chargement du plugin {0}"
+
+msgid "Everything by length"
+msgstr "Par durée"
+
+msgid "Everything by tag"
+msgstr "Par étiquette"
+
+msgid "Everything by type"
+msgstr "Par type"
+
+msgid "Everything by usage"
+msgstr "Par utilisation"
+
+msgid "Expand '{0}' to fit {1}"
+msgstr "Extension de '{0}' à {1}"
+
+msgid "Expand to fit"
+msgstr "Etendre"
+
+msgid "Export"
+msgstr "Exporter"
+
+msgid "Export format"
+msgstr "Format d'export"
+
+msgid "Export to Theora"
+msgstr "Exporter au format Theora"
+
+msgid "Export to Theora ogg..."
+msgstr "Exporter au format Theora..."
+
+msgid "Export to Wav"
+msgstr "Exporter au format Wav"
+
+msgid "Export uncompressed sound..."
+msgstr "Exporter la bande son..."
+
+msgid "Exporting"
+msgstr "Export en cours"
+
+msgid "Exports the sound of the composition to a raw wave file."
+msgstr "Exporte la bande son au format Wav brut."
+
+msgid "Failed to load '{0}'"
+msgstr "Impossible de charger '{0}'"
+
+msgid "Fatal error"
+msgstr "Erreur fatale"
+
+msgid "Feature not yet implemented"
+msgstr "Cette fonction n'est pas encore implémentée"
+
+msgid "File %s could not be found"
+msgstr "Le fichier %s est introuvable"
+
+msgid "Finishing"
+msgstr "En cours de finition"
+
+msgid "Format:"
+msgstr "Format:"
+
+msgid "From disk"
+msgstr "Depuis le disque dur"
+
+msgid "Full NTSC video"
+msgstr "Vidéo NTSC"
+
+msgid "Full NTSC widescreen video"
+msgstr "Vidéo NTSC format large"
+
+msgid "Full PAL video"
+msgstr "Vidéo PAL"
+
+msgid "Full PAL widescreen video"
+msgstr "Vidéo PAL format large"
+
+msgid "Full resolution"
+msgstr "Pleine résolution"
+
+msgid "Fullscreen"
+msgstr "Plein-écran"
+
+msgid "Good"
+msgstr "Bonne"
+
+msgid "Half NTSC video"
+msgstr "Vidéo NTSC demi-format"
+
+msgid "Half PAL video"
+msgstr "Vidéo PAL demi-format"
+
+msgid "Half resolution"
+msgstr "Demi résolution"
+
+msgid "Height:"
+msgstr "Hauteur:"
+
+msgid "High"
+msgstr "Haute"
+
+msgid "History"
+msgstr "Historique"
+
+msgid "History..."
+msgstr "Historique..."
+
+msgid "Import"
+msgstr "Importer"
+
+msgid "Initializing GConf"
+msgstr "Initialisation de GConf"
+
+msgid "Initializing application"
+msgstr "Initialisation de l'application"
+
+msgid "Internal GObject error. Please file a bug."
+msgstr "Erreur interne GObject. Signalez cette anomalie SVP."
+
+msgid ""
+"Internal GStreamer error - one of the stock elements could not be created. "
+"Check your GStreamer instalation."
+msgstr ""
+"Erreur interne GStreamer - un des éléments de base n'a pu être créé. "
+"Vérifiez l'installation de GStreamer."
+
+msgid "Internal GStreamer error during linking. Please file bug."
+msgstr "Erreur GStreamer lors de l'assemblage. Signalez l'anomalie SVP."
+
+msgid "Invalid directory"
+msgstr "Répertoire non valide"
+
+msgid "Invalid name"
+msgstr "Le nom n'est pas valide"
+
+msgid "Left adjust '{0}' to {1}"
+msgstr "Ajuste '{0}' à gauche de {1}"
+
+msgid "Loading failed"
+msgstr "Echec du chargement"
+
+msgid "Loading plugins"
+msgstr "Chargement des plugins"
+
+msgid "Loading {0}"
+msgstr "Chargement de {0}"
+
+msgid "Location:"
+msgstr "Emplacement:"
+
+msgid "Low"
+msgstr "Basse"
+
+msgid "Low resolution animation"
+msgstr "Vidéo basse résolution"
+
+msgid "Manage and organize your media assets"
+msgstr "Gestion et organisation des éléments multimédia"
+
+msgid "Mono"
+msgstr "Mono"
+
+msgid "More than 1 minute ({0})"
+msgstr "Plus d'une minute ({0})"
+
+msgid "More than 10 seconds ({0})"
+msgstr "Plus de 10 secondes ({0})"
+
+msgid "More than 30 seconds ({0})"
+msgstr "Plus de 30 secondes ({0})"
+
+msgid "More than 5 seconds ({0})"
+msgstr "Plus de 5 secondes ({0})"
+
+msgid "Move '{0}' to {1}"
+msgstr "Place '{0}' à {1}"
+
+msgid "Music & sound ({0})"
+msgstr "Son et musique ({0})"
+
+msgid "My movie"
+msgstr "Mon film"
+
+msgid "Name not unique"
+msgstr "Le nom n'est pas unique"
+
+msgid "Name:"
+msgstr "Nom:"
+
+msgid "New project"
+msgstr "Nouveau projet"
+
+msgid "New tag"
+msgstr "Nouvelle étiquette"
+
+msgid "New tag '{0}' was applied to '{1}'"
+msgstr "Etiquette '{0}' appliquée à '{1}'"
+
+msgid "Next cut"
+msgstr "Coupe suivante"
+
+msgid "No tags in the project"
+msgstr "Pas d'étiquettes dans le projet"
+
+msgid "No valid audio/video streams were found in the media file."
+msgstr "Le fichier ne contient aucun flux audio ou video valide."
+
+msgid "Normal"
+msgstr "Normale"
+
+msgid "Nothing to redo"
+msgstr "Rien à refaire"
+
+msgid "Nothing to undo"
+msgstr "Rien à défaire"
+
+msgid "Ogg files"
+msgstr "Fichiers Ogg"
+
+msgid ""
+"Ogg is a patent-free, fully open multimedia bitstream containerformat "
+"designed for efficient streaming and file compression."
+msgstr ""
+"Ogg est un format libre et ouvert sans contrainte de brevets conçu pour la "
+"diffusion de flux multimédia, compressés ou non."
+
+msgid "Open a project"
+msgstr "Ouvrir un projet"
+
+msgid "Open project"
+msgstr "Ouvrir un projet"
+
+msgid "Operation has timed out"
+msgstr "Temps d'opération dépassé"
+
+msgid "Organize"
+msgstr "Organiser"
+
+msgid "Other ({0})"
+msgstr "Autre ({0})"
+
+msgid "Overwrite file?"
+msgstr "Ecraser le fichier?"
+
+msgid "Overwrite project?"
+msgstr "Ecraser le projet?"
+
+msgid "P_layback"
+msgstr "_Lecture"
+
+msgid "Pause"
+msgstr "Pause"
+
+msgid "Photos ({0})"
+msgstr "Photos ({0})"
+
+msgid "Pipeline error"
+msgstr "Erreur dans la chaîne de traitement"
+
+msgid "Play"
+msgstr "Lecture"
+
+msgid "Play or pause the playback"
+msgstr "Lecture ou pause"
+
+msgid "Please visit http://www.diva-project.org/ for more information"
+msgstr "Consultez http://www.diva-project.org/ pour plus de détails"
+
+msgid ""
+"Please visit http://www.diva-project.org/ticket/{0} for more information"
+msgstr ""
+"Consultez le site http://www.diva-project.org/ticket/{0} pour plus de détails"
+
+msgid "Please wait while exporting movie"
+msgstr "Patientez pendant l'export du film"
+
+msgid "Please wait..."
+msgstr "Patientez..."
+
+msgid "Plugin directory not specified"
+msgstr "Répertoire des plugins non défini"
+
+msgid "Poor"
+msgstr "Pauvre"
+
+msgid "Preferences"
+msgstr "Préférences"
+
+msgid "Preloading components"
+msgstr "Préparation des composants"
+
+msgid "Previous Cut"
+msgstr "Coupe précédente"
+
+msgid "Project format"
+msgstr "Format du projet"
+
+msgid "Prune projects and media files"
+msgstr "Nettoyer les fichiers Diva"
+
+msgid "Quarter resolution"
+msgstr "Quart de résolution"
+
+msgid "Quit"
+msgstr "Quitter"
+
+msgid "Quit to main menu"
+msgstr "Retour au menu principal"
+
+msgid "Radio quality"
+msgstr "Qualité radiophonique"
+
+msgid "Recently edited"
+msgstr "Edité récemment"
+
+msgid "Redo: {0}"
+msgstr "Refaire: {0}"
+
+msgid "Redone: {0}"
+msgstr "Refait: {0}"
+
+msgid "Registering boilers"
+msgstr "Enregistrements des bouilloires"
+
+msgid "Remove clip '{0}'"
+msgstr "Suppression de la séquence '{0}'"
+
+msgid "Remove tag '{0}' from '{1}'"
+msgstr "Détachement de l'étiquettte '{0}' de '{1}'"
+
+msgid "Remove tag?"
+msgstr "Supprimer l'étiquette?"
+
+msgid "Rewind"
+msgstr "Retour"
+
+msgid "Rewind to start"
+msgstr "Retour au début"
+
+msgid "Right adjust '{0}' to {1}"
+msgstr "Ajuste '{0}' à droite de {1}"
+
+msgid "Samplerate:"
+msgstr "Fréquence:"
+
+msgid "Save"
+msgstr "Enregistrer"
+
+msgid "Save '{0}' before quitting?"
+msgstr "Enregistrer '{0}' avant de quitter?"
+
+msgid "Save log"
+msgstr "Enregistrer la trace"
+
+msgid "Save video screenshot"
+msgstr "Enregistrer une image"
+
+msgid "Saving failed"
+msgstr "Echec de l'enregistrement"
+
+msgid "Saving project"
+msgstr "Sauvegarde du projet"
+
+msgid ""
+"Screenshot image file could not be saved. Make sure the disk is not full and "
+"you've got the necessary write permissions."
+msgstr ""
+"L'image de la vidéo n'a pu être enregistrée. Vérifier l'espace disponible et "
+"assurez-vous d'avoir les droits d'écriture suffisants."
+
+msgid "Seek to next cut"
+msgstr "A la coupe suivante"
+
+msgid "Seek to previous cut"
+msgstr "A la coupe précédente"
+
+msgid "Select media files"
+msgstr "Choisissez des fichiers multimédia"
+
+msgid "Skip"
+msgstr "Passer"
+
+msgid "Skip file"
+msgstr "Ecarter le fichier"
+
+msgid "Start editing a new movie"
+msgstr "Créer un nouveau film"
+
+msgid "Starting Gdv & GStreamer"
+msgstr "Démarrage de Gdv et de GStreamer"
+
+msgid "Stereo"
+msgstr "Stéréo"
+
+msgid "Stick left"
+msgstr "Coller à gauche"
+
+msgid "Stick right"
+msgstr "Coller à droite"
+
+msgid "TRANSLATOR'S NAME GOES HERE (ie. John Doe)"
+msgstr "Alexis Deruelle <alexis.deruelle@laposte.net>"
+
+msgid "Tag"
+msgstr "Etiquette"
+
+msgid "Tag '{0} was deleted"
+msgstr "L'étiquette '{0}' a été supprimée"
+
+msgid ""
+"Tag '{0}' that you're trying to remove is applied to one or more items. Are "
+"you sure that you want to remove it?"
+msgstr ""
+"L'étiquette '{0}' que vous tenter de supprimer est appliquée à au moins un "
+"élément. Êtes-vous sûr de vouloir la supprimer?"
+
+msgid "Tag '{0}' was created"
+msgstr "Etiquette '{0}' créée"
+
+msgid "Tag '{0}' was deleted"
+msgstr "Etiquette '{0}' supprimée"
+
+msgid "Tag '{0}' was removed from '{1}'"
+msgstr "Etiquette '{0}' détachée de '{1}'"
+
+msgid "Tag color"
+msgstr "Couleur de l'étiqette"
+
+msgid "Tag name cannot be empty. Please provide a valid tag name."
+msgstr "Le nom d'une étiquette ne peut être vide."
+
+msgid "Tag name:"
+msgstr "Nom de l'étiquette:"
+
+msgid "Tags"
+msgstr "Etiquettes"
+
+msgid "Tags..."
+msgstr "Etiquettes..."
+
+msgid "Techno mode"
+msgstr "Mode Techno"
+
+msgid "Telephone quality"
+msgstr "Qualité téléphonique"
+
+msgid ""
+"The directory doesn't exsist or is not writable. Please select a different "
+"directory."
+msgstr ""
+"Le répertoire n'existe pas ou il est impossible d'y écrire. Choisissez-en un "
+"autre."
+
+msgid "The duration of the media stream could not be determined."
+msgstr "La durée du flux multimedia n'a pu être déterminée."
+
+msgid "The element is in an unexpected state."
+msgstr "L'élément se trouve dans un état incohérent."
+
+msgid ""
+"The media file could not be loaded. It might be the file is broken or you're "
+"missing the plugins required to handle it."
+msgstr ""
+"Le fichier multimrédia n'a pu être chargé. Il est peut-être endommagé ou "
+"vous ne disposez pas du plugin adéquat."
+
+msgid ""
+"The media file framerate ({0:f2}) doesn't match the project framerate ({1:"
+"f2}). Diva currently doesn't allow mixed framerates. \n"
+"\n"
+"Please consider recompressing your file or choosing another project format."
+msgstr ""
+"Le fréquence de trame de cette video ({0:f2}) ne correspond pas à celui du "
+"projet ({1:f2}. Il n'est pas encore possible de mélanger des vidéos de "
+"fréquences différentes.\n"
+"Vous pouvez recompresser le fichier ou choisir un format différent pour le "
+"projet."
+
+msgid ""
+"The project has been modified since your last save. You'll lose all your "
+"modifications if you proceed."
+msgstr ""
+"Le projet a été modifié depuis le dernier enregistrement. Vous allez perdre "
+"toutes les modifications si vous poursuivez."
+
+msgid "Theora export"
+msgstr "Export Theora"
+
+msgid ""
+"This is not a valid project name. Project name can contain letters, digits "
+"and whitespace. Please provide a valid name."
+msgstr ""
+"Ce nom n'est pas un nom de projet valide. Il ne peut contenir que des "
+"lettres,  des chiffres et des espaces. Indiquez un nom valide."
+
+msgid ""
+"This is not a valid tag name. Tag name consists of a single word with "
+"alphanumeric characters. Please provide a valid tag name."
+msgstr ""
+"Le nom n'est pas valide. Le nom d'une étiquette ne doit comprendre qu'un "
+"seul mot contenant uniquement des caractères alphanumériques."
+
+msgid "This media doesn't contain video nor audio."
+msgstr "Ce support ne contient pas de données audio ou vidéo"
+
+msgid "Track '{0}' to {1}"
+msgstr "Suivre '{0}' jusque {1}"
+
+msgid "Track opacity was changed to {0}"
+msgstr "Opacité de la piste à {0}"
+
+msgid "Undefined"
+msgstr "Indéfini"
+
+msgid "Undefined ({0})"
+msgstr "Indéterminé ({0})"
+
+msgid "Undo: {0}"
+msgstr "Défaire: {0}"
+
+msgid "Undone: {0}"
+msgstr "Défait: {0}"
+
+msgid "Unknown internal error. Please file a bug"
+msgstr "Erreur interne inconnue. Signalez l'anomalie SVP"
+
+msgid "Untagged"
+msgstr "Sans étiquette"
+
+msgid "Unused ({0})"
+msgstr "Inutilisé ({0})"
+
+msgid "Up to 5 seconds ({0})"
+msgstr "Jusqu'à 5 secondes ({0})"
+
+msgid "Used many times ({0})"
+msgstr "Utilisé plusieurs fois ({0})"
+
+msgid "Used only once ({0})"
+msgstr "Utilisé une seule fois ({0})"
+
+msgid "Very good"
+msgstr "Très bonne"
+
+msgid "Very high"
+msgstr "Très haute"
+
+msgid "Very poor"
+msgstr "Très pauvre"
+
+msgid "Video clips ({0})"
+msgstr "Séquences vidéo ({0})"
+
+msgid "Video format"
+msgstr "Format vidéo"
+
+msgid "Video format:"
+msgstr "Format vidéo:"
+
+msgid "Video quality:"
+msgstr "Qualité vidéo:"
+
+msgid "Wav export"
+msgstr "Export Wav"
+
+msgid "Wave files"
+msgstr "Fichiers Wav"
+
+msgid "Whoops..."
+msgstr "Ho là..."
+
+msgid "Width:"
+msgstr "Largeur:"
+
+msgid "Wrong framerate"
+msgstr "Mauvaise fréquence de trame"
+
+msgid ""
+"You already have a tag with this name in a project. Please provide a "
+"different name."
+msgstr "Une étiquette porte déjà le même nom. Choisissez-en un différent."
+
+msgid ""
+"You have already imported '{0}' into this project. Are you sure that you "
+"want to import another instance?"
+msgstr ""
+"'{0}' est déjà dans le projet. Êtes-vous sûr de vouloir importer une "
+"nouvelle fois (un deuxième élément identique sera créé)?"
+
+msgid "You will no longer be able to undo/redo previous actions."
+msgstr "Il sera impossible de défaire et de refaire les actions mémorisées."
+
+msgid "Zoom to few minutes"
+msgstr "Voir quelques minutes"
+
+msgid "Zoom to few seconds"
+msgstr "Voir quelques secondes"
+
+msgid "Zoom to one hour"
+msgstr "Voir une heure"
+
+msgid "Zoom to one minute"
+msgstr "Voir une minute"
+
+msgid "Zoom to one second"
+msgstr "Voir une seconde"
+
+msgid "_Edit"
+msgstr "_Editer"
+
+msgid "_File"
+msgstr "_Fichier"
+
+msgid "_Help"
+msgstr "_Aide"
+
+msgid "_Project"
+msgstr "_Projet"
+
+msgid "is {0}"
+msgstr "{0}"
+
+msgid "min"
+msgstr "min"
+
+msgid "minute"
+msgstr "minute"
+
+msgid "minutes"
+msgstr "minutes"
+
+msgid "sec"
+msgstr "sec"
+
+msgid "second"
+msgstr "seconde"
+
+msgid "seconds"
+msgstr "secondes"
+
+msgid "techno mode"
+msgstr "mode techno"
+
+msgid "{0} files were added to the project"
+msgstr "{0} fichiers ont été ajoutés au projet"

@@ -1,0 +1,940 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Diva SVN trunk\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2006-06-13 15:16+0200\n"
+"PO-Revision-Date: 2006-06-13 07:55+0200\n"
+"Last-Translator:  Thijs Vermeir<> <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+msgid "'{0}' and '{1}' were chain-adjusted"
+msgstr "'{0}' en '{1}' zijn op de ketting afgestemd"
+
+msgid "'{0}' clip was placed at {1}"
+msgstr "'{0}' clip is geplaatst aan {1}"
+
+msgid "'{0}' is already in the project"
+msgstr "'{0}' is reeds in je project"
+
+msgid "'{0}' tag was applied to '{1}'"
+msgstr "'{0}' tag is toegepast op '{0}'"
+
+msgid "'{0}' was added to the project"
+msgstr "'{0}' is toegevoegd aan het project"
+
+msgid "'{0}' was expanded to fit {1}"
+msgstr "'{0}' is uitgerokken om te passen in {1}"
+
+msgid "'{0}' was left adjusted to {1}"
+msgstr "'{0}' is links aangepast naar {1}"
+
+msgid "'{0}' was moved to {1}"
+msgstr "'{0}' is verplaatst naar {1}"
+
+msgid "'{0}' was track to {1}"
+msgstr "'{0}' is spoor naar {1}"
+
+msgid "+"
+msgstr "+"
+
+msgid "-"
+msgstr "-"
+
+msgid "11 khz"
+msgstr "11 khz"
+
+msgid "16 bit"
+msgstr "16 bit"
+
+msgid "22 khz"
+msgstr "22 khz"
+
+msgid "44.1 khz"
+msgstr "44,1 khz"
+
+msgid "48 khz"
+msgstr "48 khz"
+
+msgid "8 bit"
+msgstr "8 bit"
+
+msgid "8 khz"
+msgstr "8 khz"
+
+msgid "96 khz"
+msgstr "96 khz"
+
+msgid "<b>Welcome to Diva</b>\n"
+msgstr "<b>Welkom bij Diva</b>\n"
+
+msgid ""
+"<b>{0}</b>\n"
+"Running time: {1}"
+msgstr ""
+"<b>{0}</b>\n"
+"Afgespeelde tijd: {1}"
+
+msgid "<small>Opacity: {0}</small>"
+msgstr "<small>Doorschijnendheid: {0}</small>"
+
+msgid "Abort all"
+msgstr "Annuleer alles"
+
+msgid "Add '{0}' to the project"
+msgstr "Voeg '{0}' toe aan project"
+
+msgid "Add clip '{0}' at {1}"
+msgstr "Voeg clip '{0}' toe aan {1}"
+
+msgid "Add or import new files to the project"
+msgstr "Voeg toe of importeer nieuwe bestanden aan project"
+
+msgid "Add {0} files to the project"
+msgstr "{0} bestanden aan project toegevoegd"
+
+msgid "All digital media"
+msgstr "Alle digitale media"
+
+msgid ""
+"Allows to export the final composition to Theora ogg file. Theora is an "
+"efficient open-source video codec optimized for internet streaming"
+msgstr ""
+"Laat toe om je eindcompositie te exporteren naar een Theora ogg bestand. "
+"Theora is een efficiënte open-source video codec geoptimaliseerd voor "
+"internet streaming"
+
+msgid ""
+"Allows to export the sound of the composition to a WAV file. The resulting "
+"file is a raw, uncompressed file"
+msgstr ""
+"Laat toe dat kan worden geexporteerd naar een WAV bestand. Dit resulteerdin "
+"een raw, ongecompreseerd bestand"
+
+msgid ""
+"An error occured in the GStreamer processing pipeline. If you're using other "
+"applications that use video/audio output please close them.\n"
+"\n"
+"It's recommended that you save your work now and restart the project as soon "
+"as possible."
+msgstr ""
+"Er is een fout opgetreden in de GStreamer processing pipeline. Als je andere "
+"programma's gebruiktdie video of audio verwerken, gelieve deze dan af te "
+"sluiten.\n"
+"\n"
+"Het is aangeraden je project zo snel mogelijk op te slaan en je project te "
+"herstarten."
+
+msgid ""
+"An unexpected, fatal error occured. Details about the failure were outputed "
+"to the error console. You might optionally save the crash log to a file and "
+"attach it to a bug report. \n"
+"\n"
+"The application is now most likely in an unstable state. You should save "
+"your work as soon as possible"
+msgstr ""
+"Een onvoorziene fatale fout is opgetreden. Details over deze fout worden "
+"weergegeven in de error console. Je kan het crash log best opslaan en "
+"gebruiken bij het melden van de bug.\n"
+"\n"
+"De applicatie is nu in een onstabiele toestand. Je kan best zo snel mogelijk "
+"opslaan."
+
+msgid ""
+"Another project with the same name is present in the directory. Are you sure "
+"that you want to overwrite it?"
+msgstr ""
+"Er bestaat een ander project in dezelfde folder met dezelfde naam. Ben je "
+"zekerDat je dit wilt overschijven?"
+
+msgid "Apply new tag '{0}' to '{1}'"
+msgstr "Pas nieuwe tag '{0}' toe op '{1}'"
+
+msgid "Apply tag '{0}' to '{1}'"
+msgstr "Pas Tag '{0}' op '{1}' toe"
+
+msgid "Are you sure that you want to overwrite that file?"
+msgstr "Ben je zeker dat je het bestand wilt overschrijven?"
+
+msgid "Are you sure you want to clear the history?"
+msgstr "Ben je zeker dat je de geschiedenis wilt wissen?"
+
+msgid "Aspect ratio:"
+msgstr "Verhouding:"
+
+msgid "Audio format"
+msgstr "Audio formaat"
+
+msgid "Audio format:"
+msgstr "Audio formaat:"
+
+msgid "Audio quality:"
+msgstr "Audio kwaliteit:"
+
+msgid "Audio rate:"
+msgstr "Audio rate:"
+
+msgid "Average"
+msgstr "Gemiddeld"
+
+msgid "CD quality"
+msgstr "CD kwaliteit"
+
+msgid "Capture media"
+msgstr "Media opnemen"
+
+msgid "Chain-adjust '{0}' and '{1}'"
+msgstr "Afstemmen '{0}' en '{1}'"
+
+msgid "Change the media organizing method"
+msgstr "Wijzig de methode voor het organizeren van de media"
+
+msgid "Change track opacity to {0}"
+msgstr "Wijzig track doorschijnendheid naar {0}"
+
+msgid "Channels:"
+msgstr "Kanalen:"
+
+msgid "Clear history"
+msgstr "Wis geschiedenis"
+
+msgid "Clip '{0}' was cutted at {1}"
+msgstr "Clip '{0}' was geknipt aan {1}"
+
+msgid "Clip '{0}' was removed"
+msgstr "Clip '{0}' is verwijderd"
+
+msgid "Clip '{0}' was right adjusted to {1}"
+msgstr "Clip '{0}' is rechts aangepast naar {1}"
+
+msgid "Close without saving"
+msgstr "Afsluiten zonder te bewaren"
+
+msgid "Create new tag '{0}'"
+msgstr "Nieuwe Tag aanmaken '{0}'"
+
+msgid "Create new tag..."
+msgstr "Maak nieuwe tag aan..."
+
+msgid "Create or select a folder"
+msgstr "Maak een nieuwe of selecteer een folder"
+
+msgid "Custom"
+msgstr "Aanpassing"
+
+msgid "Cut clip '{0}' at {1}"
+msgstr "Knip clip '{0}' op {1}"
+
+msgid "Delete tag '{0}'"
+msgstr "Verwijder tag '{0}'"
+
+msgid "Depth:"
+msgstr "Dieptie:"
+
+msgid "Displays current playback cursor position"
+msgstr "Geef cursor van huidige positie weer"
+
+msgid "Diva"
+msgstr "Diva"
+
+msgid "Diva - {0}"
+msgstr "Diva - {0}"
+
+msgid "Diva projects"
+msgstr "Diva projecten"
+
+msgid "Edit tag"
+msgstr "Bewerk tag"
+
+msgid "Edit tag '{0}' ('{1}')"
+msgstr "Bewerk tag '{0}' ('{1}')"
+
+msgid ""
+"Element '%s' is not availible in your GStreamer installation. Please check "
+"that necessary plugins are installed."
+msgstr ""
+"Element '%s' is niet beschikbaar in uw GStreamer installatie. Controleer "
+"ofdat de benodigde plugins geinstalleerd zijn."
+
+msgid "Empty name"
+msgstr "Leege naam"
+
+msgid "Error details"
+msgstr "Fout details"
+
+msgid "Error while loading plugin assembly {0}"
+msgstr "Fout bij het laden van de plugin assembly {0}"
+
+msgid "Everything by length"
+msgstr "Alles per lengte"
+
+msgid "Everything by tag"
+msgstr "Alles volgens tag"
+
+msgid "Everything by type"
+msgstr "Alles per type"
+
+msgid "Everything by usage"
+msgstr "Alles volgens gebruik"
+
+msgid "Expand '{0}' to fit {1}"
+msgstr "uitrekken '{0}' om in {1} te passen"
+
+msgid "Expand to fit"
+msgstr "Vergroten tot het past"
+
+msgid "Export"
+msgstr "Exporteren"
+
+msgid "Export format"
+msgstr "Export formaat"
+
+msgid "Export to Theora"
+msgstr "Exporteer naar Theora"
+
+msgid "Export to Theora ogg..."
+msgstr "Exporteer naar Theora ogg..."
+
+msgid "Export to Wav"
+msgstr "Exporteer naar Wav"
+
+msgid "Export uncompressed sound..."
+msgstr "Exporteer ongecompreseerd geluid..."
+
+msgid "Exporting"
+msgstr "Bezig met exporteren"
+
+msgid "Exports the sound of the composition to a raw wave file."
+msgstr "Exporteer het geluid naar een raw wave bestand."
+
+msgid "Failed to load '{0}'"
+msgstr "Laden van '{0}' mislukt"
+
+msgid "Fatal error"
+msgstr "Ernstige fout"
+
+msgid "Feature not yet implemented"
+msgstr "Mogelijk is nog niet geimplementeerd"
+
+msgid "File %s could not be found"
+msgstr "Bestand %s kan niet worden gevonden"
+
+msgid "Finishing"
+msgstr "Beëindigen"
+
+msgid "Format:"
+msgstr "Formaat:"
+
+msgid "Frame"
+msgstr "Frame"
+
+msgid "From disk"
+msgstr "Van schijf"
+
+msgid "Full NTSC video"
+msgstr "Vol NTSC video"
+
+msgid "Full NTSC widescreen video"
+msgstr "Vol NTSC breedbeeld video"
+
+msgid "Full PAL video"
+msgstr "Vol PAL video"
+
+msgid "Full PAL widescreen video"
+msgstr "Vol PAL breedbeeld video"
+
+msgid "Full resolution"
+msgstr "Volle resolutie"
+
+msgid "Fullscreen"
+msgstr "Volledig scherm"
+
+msgid "Good"
+msgstr "Goed"
+
+msgid "Half NTSC video"
+msgstr "Halve NTSC video"
+
+msgid "Half PAL video"
+msgstr "Halve PAL video"
+
+msgid "Half resolution"
+msgstr "Halve resolutie"
+
+msgid "Height:"
+msgstr "Hoogte:"
+
+msgid "High"
+msgstr "Hoog"
+
+msgid "History"
+msgstr "Geschiedenis"
+
+msgid "History..."
+msgstr "Geschiedenis..."
+
+msgid "Hours:"
+msgstr "Uren:"
+
+msgid "Import"
+msgstr "Importeren"
+
+msgid "Initializing GConf"
+msgstr "Initializeren GConf"
+
+msgid "Initializing application"
+msgstr "Initialisatie toepassing"
+
+msgid "Internal GObject error. Please file a bug."
+msgstr "Interne GOject fout. Raporteer deze bug, aub."
+
+msgid ""
+"Internal GStreamer error - one of the stock elements could not be created. "
+"Check your GStreamer instalation."
+msgstr ""
+"Interne GStreamer fout - een van de stock elementen kon niet worden "
+"gecreërd. Controleer uw GStreamer installatie."
+
+msgid "Internal GStreamer error during linking. Please file bug."
+msgstr "Interne GStreamer fout bij het linken. Raporteer deze bug, AUB."
+
+msgid "Invalid directory"
+msgstr "Ongeldige folder"
+
+msgid "Invalid name"
+msgstr "Ongeldige naam"
+
+msgid "Jump To"
+msgstr "Spring naar"
+
+msgid "Jump to:"
+msgstr "Spring naar:"
+
+msgid "Left adjust '{0}' to {1}"
+msgstr "Links aangepast '{0}' naar {1}"
+
+msgid "Loading failed"
+msgstr "Laden mislukt"
+
+msgid "Loading plugins"
+msgstr "Laden van plugins"
+
+msgid "Loading {0}"
+msgstr "Laden {0}"
+
+msgid "Location:"
+msgstr "Plaats:"
+
+msgid "Low"
+msgstr "Laag"
+
+msgid "Low resolution animation"
+msgstr "Lage resolutie animatie"
+
+msgid "Manage and organize your media assets"
+msgstr "Beheer en organizeer je media verzameling"
+
+msgid "Minutes:"
+msgstr "Minuten:"
+
+msgid "Mono"
+msgstr "Mono"
+
+msgid "More than 1 minute ({0})"
+msgstr "Meer dan 1 minuur ({0})"
+
+msgid "More than 10 seconds ({0})"
+msgstr "Meer dan 10 seconden ({0})"
+
+msgid "More than 30 seconds ({0})"
+msgstr "Meer dan 30 seconden ({0})"
+
+msgid "More than 5 seconds ({0})"
+msgstr "Meer dan 5 seconden ({0})"
+
+msgid "Move '{0}' to {1}"
+msgstr "Verplaats '{0}' naar {1}"
+
+msgid "Music & sound ({0})"
+msgstr "Muziek & geluid ({0})"
+
+msgid "My movie"
+msgstr "Mijn Film"
+
+msgid "Name not unique"
+msgstr "Naam niet uniek"
+
+msgid "Name:"
+msgstr "Naam:"
+
+msgid "New project"
+msgstr "Nieuw project"
+
+msgid "New tag"
+msgstr "Nieuw tag"
+
+msgid "New tag '{0}' was applied to '{1}'"
+msgstr "New tag '{0}' is toegepast op '{1}'"
+
+msgid "Next cut"
+msgstr "Volgende scene"
+
+msgid "No tags in the project"
+msgstr "Geen tags in het project"
+
+msgid "No valid audio/video streams were found in the media file."
+msgstr "Geen geldige audio/video streams gevonden in het media bestand."
+
+msgid "Normal"
+msgstr "Normaal"
+
+msgid "Nothing to redo"
+msgstr "Kan niets opniew doen"
+
+msgid "Nothing to undo"
+msgstr "Kan niets ongedaan maken"
+
+msgid "Ogg files"
+msgstr "Ogg bestanden"
+
+msgid ""
+"Ogg is a patent-free, fully open multimedia bitstream containerformat "
+"designed for efficient streaming and file compression."
+msgstr ""
+"Ogg is een patend-vrij, volledig open multimedia bitstream "
+"containerformaatontworpen voor een efficiente bestandscompressie en "
+"streaming mogelijkheden"
+
+msgid "Open a project"
+msgstr "Open een project"
+
+msgid "Open project"
+msgstr "Open project"
+
+msgid "Operation has timed out"
+msgstr "Bewerking is mislukt (time out)"
+
+msgid "Organize"
+msgstr "Organizeren"
+
+msgid "Other ({0})"
+msgstr "Anders ({0})"
+
+msgid "Overwrite file?"
+msgstr "Bestand overschrijven?"
+
+msgid "Overwrite project?"
+msgstr "Project overschrijven?"
+
+msgid "P_layback"
+msgstr "_Weergeven"
+
+msgid "Pause"
+msgstr "Pause"
+
+msgid "Photos"
+msgstr "Fotos"
+
+msgid "Photos ({0})"
+msgstr "Fotos ({0})"
+
+msgid "Pipeline error"
+msgstr "Pipeline fout"
+
+msgid "Play"
+msgstr "Play"
+
+msgid "Play or pause the playback"
+msgstr "Play of pauzeer de weergave"
+
+msgid "Please visit http://www.diva-project.org/ for more information"
+msgstr "Bezoek http://www.diva-project.org/ voor meer informatie"
+
+msgid ""
+"Please visit http://www.diva-project.org/ticket/{0} for more information"
+msgstr "Ga naar http://www.diva-project.org/ticket/{0} voor meer informatie"
+
+msgid "Please wait while exporting movie"
+msgstr "Even gedult, bezig met exporteren van film"
+
+msgid "Please wait..."
+msgstr "Een ogenblik gedult, aub"
+
+msgid "Plugin directory not specified"
+msgstr "Plugin folder niet gespecifierd"
+
+msgid "Poor"
+msgstr "Matig"
+
+msgid "Preferences"
+msgstr "Voorkeuren"
+
+msgid "Preloading components"
+msgstr "Voorladen componenten"
+
+msgid "Previous Cut"
+msgstr "Vorige scene"
+
+msgid "Project format"
+msgstr "Project formaat"
+
+msgid "Prune projects and media files"
+msgstr "Verwijder projecten en media"
+
+msgid "Quarter resolution"
+msgstr "Kwart resolutie"
+
+msgid "Quit"
+msgstr "Afsluiten"
+
+msgid "Quit to main menu"
+msgstr "Afsluiten naar hoofdmenu"
+
+msgid "Radio quality"
+msgstr "Radio kwaliteit"
+
+msgid "Recently edited"
+msgstr "Recent bewerkt"
+
+msgid "Redo: {0}"
+msgstr "Opnieuw: {0}"
+
+msgid "Redone: {0}"
+msgstr "Herdaan: {0}"
+
+msgid "Registering boilers"
+msgstr "Registratie boilers"
+
+msgid "Remove clip '{0}'"
+msgstr "Verwijder clip '{0}'"
+
+msgid "Remove tag '{0}' from '{1}'"
+msgstr "Verwijder tag '{0}' van '{1}'"
+
+msgid "Remove tag?"
+msgstr "Verwijderen van tag?"
+
+msgid "Rewind"
+msgstr "Terugspoelen"
+
+msgid "Rewind to start"
+msgstr "Terugspoelen naar start"
+
+msgid "Right adjust '{0}' to {1}"
+msgstr "Rechts aangepast van '{0}' naar {1}"
+
+msgid "Samplerate:"
+msgstr "Samplerate:"
+
+msgid "Save"
+msgstr "Save"
+
+msgid "Save '{0}' before quitting?"
+msgstr "Opslaan '{0}' voor het afsluiten?"
+
+msgid "Save log"
+msgstr "Log bewaren"
+
+msgid "Save video screenshot"
+msgstr "video screenshot opslaan"
+
+msgid "Saving failed"
+msgstr "Opslaan mislukt"
+
+msgid "Saving project"
+msgstr "Bewaren van project"
+
+msgid ""
+"Screenshot image file could not be saved. Make sure the disk is not full and "
+"you've got the necessary write permissions."
+msgstr ""
+"Schermafbeelding kon niet worden opgeslagen. Zorg dat je er zeker van bent "
+"datje schijf niet vol is en dat je de nodige rechten hebt op te kunnen "
+"schrijven."
+
+msgid "Seconds:"
+msgstr "Seconden:"
+
+msgid "Seek to next cut"
+msgstr "Zoeken naar volgende scene"
+
+msgid "Seek to previous cut"
+msgstr "Zoeken naar vorige scene"
+
+msgid "Select media files"
+msgstr "Selecteer media bestanden"
+
+msgid "Skip"
+msgstr "Overslaan"
+
+msgid "Skip file"
+msgstr "Spring over bestand"
+
+msgid "Sound & music"
+msgstr "Geluid & muziek"
+
+msgid "Start editing a new movie"
+msgstr "Start editeren van nieuwe film"
+
+msgid "Starting Gdv & GStreamer"
+msgstr "Starten Gdv & GStreamer"
+
+msgid "Stereo"
+msgstr "Stereo"
+
+msgid "Stick left"
+msgstr "Stick Links"
+
+msgid "Stick right"
+msgstr "Stick rechts"
+
+msgid "TRANSLATOR'S NAME GOES HERE (ie. John Doe)"
+msgstr "Thijs Vermeir"
+
+msgid "Tag"
+msgstr "Tag"
+
+msgid "Tag '{0} was deleted"
+msgstr "Tag '{0}' is verwijderd"
+
+msgid ""
+"Tag '{0}' that you're trying to remove is applied to one or more items. Are "
+"you sure that you want to remove it?"
+msgstr ""
+"Tag '{0}' dat je probeert te verwijderen is toegepast op één of "
+"verschillende items.Ben je zeker dat je deze wilt verwijderen?"
+
+msgid "Tag '{0}' was created"
+msgstr "Tag '{0}' is aangemaakt"
+
+msgid "Tag '{0}' was deleted"
+msgstr "Tag '{0}' is verwijderd"
+
+msgid "Tag '{0}' was removed from '{1}'"
+msgstr "Tag '{0}' is verwijderd van '{1}'"
+
+msgid "Tag color"
+msgstr "Tag kleur"
+
+msgid "Tag name cannot be empty. Please provide a valid tag name."
+msgstr "Tag naam kan niet leeg zijn. Geef een geldige naam op."
+
+msgid "Tag name:"
+msgstr "Tag naam:"
+
+msgid "Tags"
+msgstr "Tags"
+
+msgid "Tags..."
+msgstr "Tags..."
+
+msgid "Techno mode"
+msgstr "Techno mode"
+
+msgid "Telephone quality"
+msgstr "Telefoon kwaliteit"
+
+msgid ""
+"The directory doesn't exsist or is not writable. Please select a different "
+"directory."
+msgstr ""
+"De folder bestaat niet of heeft geen toegang voor schrijven. Selecteer een "
+"andere folder."
+
+msgid "The duration of the media stream could not be determined."
+msgstr "De lengte van de media stream kon niet worden bepaald."
+
+msgid "The element is in an unexpected state."
+msgstr "Het element is in een onvoorziene toestand."
+
+msgid ""
+"The media file could not be loaded. It might be the file is broken or you're "
+"missing the plugins required to handle it."
+msgstr ""
+"Het media bestand kon niet worden geladen. Het zou kunnen dat het bestand "
+"foutief is of dat je vereiste plugins mist."
+
+msgid ""
+"The media file framerate ({0:f2}) doesn't match the project framerate ({1:"
+"f2}). Diva currently doesn't allow mixed framerates. \n"
+"\n"
+"Please consider recompressing your file or choosing another project format."
+msgstr ""
+"De framerate van het mediabestand ({0:f2}) komt niet overeen met de "
+"framerate van project ({1:f2}). Diva supporteerd momenteel geen gemengde "
+"framerates. \n"
+"\n"
+"Hercompreseer uw mediabestand of gebruik andere project opties."
+
+msgid ""
+"The project has been modified since your last save. You'll lose all your "
+"modifications if you proceed."
+msgstr ""
+"Het project is gewijzigd sinds de laatste keer dat je hebt opgeslagen. Je "
+"zal al jevoorderingen verliezen als je doorgaat."
+
+msgid "Theora export"
+msgstr "Theora exporteren"
+
+msgid ""
+"This is not a valid project name. Project name can contain letters, digits "
+"and whitespace. Please provide a valid name."
+msgstr ""
+"Dit is geen geldige naam voor het project. Project naam kan letter, "
+"cijfersen spaties bevatten. Geef een geldige naam op."
+
+msgid ""
+"This is not a valid tag name. Tag name consists of a single word with "
+"alphanumeric characters. Please provide a valid tag name."
+msgstr "Dit is geen geldige tag naam. geef een geldige naam op"
+
+msgid "This media doesn't contain video nor audio."
+msgstr "Deze media bevat geen audio of video."
+
+msgid "Track '{0}' to {1}"
+msgstr "Spoor '{0}' naar {1}"
+
+msgid "Track opacity was changed to {0}"
+msgstr "Spoor opacity is gewijzigd naar {0}"
+
+msgid "Undefined"
+msgstr "Ongedefinieerd"
+
+msgid "Undefined ({0})"
+msgstr "Ongedefiniërd ({0})"
+
+msgid "Undo: {0}"
+msgstr "Ongedaan maken: {0}"
+
+msgid "Undone: {0}"
+msgstr "Ongedaan: {0}"
+
+msgid "Unknown internal error. Please file a bug"
+msgstr "Ongekende interne fout. Raporteer deze bug, AUB"
+
+msgid "Untagged"
+msgstr "On-tagged"
+
+msgid "Unused ({0})"
+msgstr "Ongebruikt ({0})"
+
+msgid "Up to 5 seconds ({0})"
+msgstr "Tot 5 seconden ({0})"
+
+msgid "Used many times ({0})"
+msgstr "Veel keer gebruikt ({0})"
+
+msgid "Used only once ({0})"
+msgstr "Maar 1 keer gebruikt ({0})"
+
+msgid "Very good"
+msgstr "Heel goed"
+
+msgid "Very high"
+msgstr "Heel hoog"
+
+msgid "Very poor"
+msgstr "Zeer matig"
+
+msgid "Video clips"
+msgstr "Video clips"
+
+msgid "Video clips ({0})"
+msgstr "Video clips ({0})"
+
+msgid "Video format"
+msgstr "Video formaat"
+
+msgid "Video format:"
+msgstr "Video formaat:"
+
+msgid "Video quality:"
+msgstr "Video kwaliteit:"
+
+msgid "Wav export"
+msgstr "Wav exporteren"
+
+msgid "Wave files"
+msgstr "Wave bestanden"
+
+msgid "Whoops..."
+msgstr "Oeps..."
+
+msgid "Width:"
+msgstr "Breedte:"
+
+msgid "Wrong framerate"
+msgstr "Verkeerde framerate"
+
+msgid ""
+"You already have a tag with this name in a project. Please provide a "
+"different name."
+msgstr ""
+"Je hebt al een tag met deze naam in je project.Geef een andere naam op."
+
+msgid ""
+"You have already imported '{0}' into this project. Are you sure that you "
+"want to import another instance?"
+msgstr ""
+"Je hebt '{0}' reeds geimporteerd in dit project. Ben je zeker dat je ditnog "
+"eens wilt importeren"
+
+msgid "You will no longer be able to undo/redo previous actions."
+msgstr "Je zal niet langer acties kunnen ongedaan maken of opniew doen."
+
+msgid "Zoom to few minutes"
+msgstr "Zoom naar enkele minuten"
+
+msgid "Zoom to few seconds"
+msgstr "Zoom naar enkele minuten"
+
+msgid "Zoom to one hour"
+msgstr "Zoom naar een uur"
+
+msgid "Zoom to one minute"
+msgstr "Zoom naar een minuut"
+
+msgid "Zoom to one second"
+msgstr "Zoom naar een seconde"
+
+msgid "_Edit"
+msgstr "B_ewerken"
+
+msgid "_File"
+msgstr "_Bestand"
+
+msgid "_Help"
+msgstr "_Help"
+
+msgid "_Project"
+msgstr "_Project"
+
+msgid "is {0}"
+msgstr "is {0}"
+
+msgid "min"
+msgstr "min"
+
+msgid "minute"
+msgstr "minuut"
+
+msgid "minutes"
+msgstr "minuten"
+
+msgid "sec"
+msgstr "sec"
+
+msgid "second"
+msgstr "second"
+
+msgid "seconds"
+msgstr "seconden"
+
+msgid "techno mode"
+msgstr "Techno mode"
+
+msgid "{0} files were added to the project"
+msgstr "{0} bestanden werden aan het project toegevoegd"
