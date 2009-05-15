@@ -1,6 +1,6 @@
 Import                          ('testEnv');
 
-env = testEnv.Copy              ();
+env = testEnv.Clone             ();
 
 env.Append                      (REF = Split ('#src/Diva.Widgets/widgets.dll'));
 

@@ -2,7 +2,7 @@ Import                          ('divaEnv');
 Import                          ('shellEnv');
 import                          os;
 
-env = divaEnv.Copy              ();
+env = divaEnv.Clone             ();
 env.Append                      (REF = Split ('#src/Diva.Util/util.dll'));
 
 sources = Split                 ('AssemblyInfo.cs \

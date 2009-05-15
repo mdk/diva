@@ -5,7 +5,7 @@ Import                          ('shellEnv');
 
 # C ############################################################################
 
-localEnvC = CEnv.Copy           ();
+localEnvC = CEnv.Clone          ();
             
 sourcesC = Split                ('DivaCairoGraphics.c \
                                   DivaCairoSketch.c \
@@ -20,7 +20,7 @@ cairo = localEnvC.SharedLibrary('libdivacairo', sourcesC);
 
 # MONO #########################################################################
 
-localEnvMono = divaEnv.Copy     ();
+localEnvMono = divaEnv.Clone    ();
 
 sourcesMono = Split             ('AssemblyInfo.cs \
                                   Diva.Cairo.Graphics.cs \

@@ -5,7 +5,7 @@ Import                          ('shellEnv');
 
 # C ############################################################################
 
-localEnvC = CEnv.Copy           ();
+localEnvC = CEnv.Clone          ();
             
 sourcesC = Split                ('DivaWidgetsAspectFrame.c \
                                   DivaWidgetsThmbRenderer.c \
@@ -20,7 +20,7 @@ widgets = localEnvC.SharedLibrary('libdivawidgets', sourcesC);
 
 # Mono #########################################################################
 
-localEnvMono = divaEnv.Copy     ();
+localEnvMono = divaEnv.Clone    ();
 
 localEnvMono.Append             (REF = Split ('#src/Diva.Util/util.dll \
                                                #src/Diva.Cairo/cairo.dll'));

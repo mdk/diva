@@ -1,6 +1,6 @@
 Import                          ('testEnv');
 
-env = testEnv.Copy              ();
+env = testEnv.Clone             ();
 
 env.Append                      (REF = Split ('#src/Diva.Cairo/cairo.dll'), 
                                  RESOURCE = Split ('Resources/thmb1.png \

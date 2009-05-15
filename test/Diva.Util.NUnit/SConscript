@@ -5,7 +5,7 @@ sources = Split                 ('Diva.Util.NUnit.FromSMPTETest.cs \
                                   Diva.Util.NUnit.DirTest.cs \
                                   Diva.Util.NUnit.ToSMPTETest.cs');
 
-env = monoEnv.Copy              (REF = Split ('#src/Gdv/gdv.dll #src/Diva.Util/util.dll'),
+env = monoEnv.Clone             (REF = Split ('#src/Gdv/gdv.dll #src/Diva.Util/util.dll'),
                                  PKG = Split ('mono-nunit \
                                                gtk-sharp-2.0'));		
 

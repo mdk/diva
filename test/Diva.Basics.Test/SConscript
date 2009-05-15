@@ -10,7 +10,7 @@ sources = Split                 ('Diva.Basics.Test.Parameters.cs \
                                   Diva.Basics.Test.UnBoiling.cs \
                                   Diva.Basics.Test.Read.cs');
 
-env = testEnv.Copy              ();
+env = testEnv.Clone             ();
 
 env.Append                      (REF = Split ('#src/Diva.Basics/basics.dll'));
 

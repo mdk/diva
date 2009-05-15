@@ -17,7 +17,7 @@ sources = Split                 ('AssemblyInfo.cs \
                                   Gdv.Boilers.Pipeline.cs \
                                   Gdv.Boilers.Common.cs');
 
-env = divaEnv.Copy              ();
+env = divaEnv.Clone             ();
 
 env.Append                      (REF = Split ('#src/Diva.Basics/basics.dll'));
 

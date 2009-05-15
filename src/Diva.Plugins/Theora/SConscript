@@ -5,7 +5,7 @@ Import                          ('shellEnv');
 
 # C ############################################################################
 
-localEnvC = CEnv.Copy           ();
+localEnvC = CEnv.Clone          ();
             
 sourcesC = Split                ('DivaPluginsTheoraExporter.c');
 
@@ -16,7 +16,7 @@ theora = localEnvC.SharedLibrary ('../libtheoraexporter', sourcesC);
 
 # Mono #########################################################################
 
-localEnvMono = divaEnv.Copy     ();
+localEnvMono = divaEnv.Clone    ();
 
 localEnvMono.Append             (REF = Split ('#src/Diva.PluginLib/pluginlib.dll \
                                                #src/Diva.Widgets/widgets.dll \

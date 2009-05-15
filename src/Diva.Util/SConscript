@@ -2,7 +2,7 @@ import                          os;
 Import                          ('divaEnv');
 Import                          ('shellEnv');
 
-env = divaEnv.Copy              ();
+env = divaEnv.Clone             ();
 
 env.Append                      (RESOURCE = Split ('Resources/diva96.png \
                                                     Resources/diva48.png \

@@ -2,7 +2,7 @@ import                          os;
 Import                          ('divaEnv');
 Import                          ('shellEnv');
 
-env = divaEnv.Copy              ();
+env = divaEnv.Clone             ();
 
 env.Append                      (REF = Split ('#src/Diva.Util/util.dll \
                                                #src/Diva.MainMenu/mainmenu.dll \

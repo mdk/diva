@@ -5,7 +5,7 @@ Import                          ('shellEnv');
 
 # C ############################################################################
 
-localEnvC = CEnv.Copy           ();
+localEnvC = CEnv.Clone          ();
 localEnvC.Append                (CPPPATH='.',
                                  CCFLAGS = Split ('-DG_LOG_DOMAIN=\\\"Gdv\\\"'),
                                  LIBS = Split ('gstinterfaces-0.10'));
@@ -108,7 +108,7 @@ sourcesMono = Split              ('AssemblyInfo.cs \
                                    Gdv.ClipStore.cs \
                                    Gdv.Handlers.cs');
 
-localEnvMono = monoEnv.Copy     (PKG = Split ('gtk-sharp-2.0'));
+localEnvMono = monoEnv.Clone    (PKG = Split ('gtk-sharp-2.0'));
 
 gdvdll = localEnvMono.Dll       ('gdv.dll', sourcesMono);
 localEnvMono.Depends            (gdvdll, gdv);

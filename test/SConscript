@@ -1,7 +1,7 @@
 Import                  ('monoEnv');
 Import                  ('CheckPkg');
 
-testEnv = monoEnv.Copy  (PKG = Split ('gtk-sharp-2.0 gnome-sharp-2.0'), 
+testEnv = monoEnv.Clone (PKG = Split ('gtk-sharp-2.0 gnome-sharp-2.0'), 
                          REF = Split ('#src/Gdv/gdv.dll'),
                          GREF = Split ('Mono.Posix.dll'));
 

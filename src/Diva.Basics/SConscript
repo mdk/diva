@@ -2,7 +2,7 @@ import                          os;
 Import                          ('divaEnv');
 Import                          ('shellEnv');
 
-env = divaEnv.Copy              ();
+env = divaEnv.Clone             ();
 
 sources = Split                 ('AssemblyInfo.cs \
                                   Diva.Basics.DataElement.cs \
