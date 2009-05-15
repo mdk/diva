@@ -2,7 +2,7 @@
 
 This our second ALPHA release. Please do bear in mind it contains bugs
 and is not meant for general usage (yet). A lot of nasty issues from
-0.0.1 were fixed, but theare are still some rough edges. In
+0.0.1 were fixed, but there are still some rough edges. In
 particular, we still require patching of gst-plugins-good (dv
 decoder). We understand this is a nasty solution. This situation will
 be fixed in next release, where we'll be (hopefully) supporting many
